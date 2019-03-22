@@ -1,0 +1,56 @@
+<div class="widgets">
+  
+  <div class="ng-cloak" ng-controller="MeritListPageCtrl as selectpickerVm">
+    <form name="ApplicationForm" ng-submit="generateListAccToBranch(selectpickerVm.selectedItemGender.selected,selectpickerVm.selectedItemYear.selected,selectpickerVm.selectedItemBranch.selected)">
+    
+      <div class="form-group">
+
+        <div class="col-md-3">
+          <ui-select ng-model="selectpickerVm.selectedItemGender.selected" class="btn-group bootstrap-select form-control"
+            ng-disabled="false" append-to-body="true" search-enabled="false">
+            <ui-select-match placeholder="Gender">
+              <span> {{$select.selected.label}}</span>
+            </ui-select-match>
+            <ui-select-choices repeat="standardItemGender in selectpickerVm.standardSelectItemsGender | filter: $select.search">
+              <span ng-bind-html="standardItemGender.label"></span>
+            </ui-select-choices>
+          </ui-select>
+          <br><br>
+        </div>
+
+        <div class="col-md-3">
+          <ui-select ng-model="selectpickerVm.selectedItemYear.selected" class="btn-group bootstrap-select form-control"
+            ng-disabled="false" append-to-body="true" search-enabled="false">
+            <ui-select-match placeholder="Year of Study">
+              <span> {{$select.selected.label}}</span>
+            </ui-select-match>
+            <ui-select-choices repeat="standardItemYear in selectpickerVm.standardSelectItemsYear | filter: $select.search">
+              <span ng-bind-html="standardItemYear.label"></span>
+            </ui-select-choices>
+          </ui-select>
+          <br><br>
+        </div>
+
+
+        <div class="col-md-3">
+          <ui-select ng-model="selectpickerVm.selectedItemBranch.selected" class="btn-group bootstrap-select form-control"
+            ng-disabled="false" append-to-body="true" search-enabled="false">
+            <ui-select-match placeholder="Branch">
+              <span> {{$select.selected.label}}</span>
+            </ui-select-match>
+            <ui-select-choices repeat="standardItemBranch in selectpickerVm.standardSelectItemsBranch | filter: $select.search">
+              <span ng-bind-html="standardItemBranch.label"></span>
+            </ui-select-choices>
+          </ui-select>
+          <br><br>
+        </div>
+
+        <div class="col-md-3">
+          <button type="submit" class="btn btn-primary">Generate</button>
+        </div>
+  
+      </div>        
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,298 @@
+<div class="widgets">
+
+    <div class="row">
+        <div class="col-md-12">.
+            
+            <ba-wizard>
+                <ba-wizard-step title="Investor Info" form="vm.ResgisterInvestor">
+                    <form name="vm.ResgisterInvestor">
+
+                        <div class="form-group">
+                            <div class="row"><br>
+
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.name.$invalid && (vm.ResgisterInvestor.name.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <input type="text" class="form-control" name="name" id="name" ng-model="insert.name"
+                                            placeholder="Enter Full Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.email.$invalid && (vm.ResgisterInvestor.email.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <input type="email" class="form-control" name="email" id="email" ng-model="insert.email"
+                                            placeholder="Enter Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.linkedin_url.$invalid && (vm.ResgisterInvestor.linkedin_url.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <input type="url" class="form-control" name="linkedin_url" id="linkedin_url"
+                                            ng-model="insert.linkedin_url" placeholder="Enter Linkedin URL" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.city.$invalid && (vm.ResgisterInvestor.city.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <input type="text" class="form-control" name="city" id="city" ng-model="insert.city"
+                                            placeholder="Enter City" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.mob_no.$invalid && (vm.ResgisterInvestor.mob_no.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <input type="tel" class="form-control" name="mob_no" id="mob_no" ng-model="insert.mob_no"
+                                            placeholder="+91" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.represent.$invalid && (vm.ResgisterInvestor.represent.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <select class="form-control selectpicker" title="Who are you representing"
+                                            selectpicker name="represent" id="represent" ng-model="insert.represent"
+                                            required>
+                                            <option>Individual Investor</option>
+                                            <option>Accelerator/Incubator</option>
+                                            <option>Family Office</option>
+                                            <option>VC Fund</option>
+                                            <option>Angel Network</option>
+                                            <option>Corporate Fund</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.i_name.$invalid && (vm.ResgisterInvestor.i_name.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <input type="text" class="form-control" name="i_name" id="i_name" ng-model="insert.i_name"
+                                            placeholder="Enter Institution Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.i_url.$invalid && (vm.ResgisterInvestor.i_url.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <input type="url" class="form-control" name="i_url" id="i_url" ng-model="insert.i_url"
+                                            placeholder="Enter Institution Website" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <center><label for="interest"><b>GIVE YOUR POINT OF INTERESTS</b></label></center>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-4">
+                                        <uib-accordion>
+                                            <center>
+                                                <uib-accordion-group heading="Priority 1" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                                </uib-accordion-group>
+                                            </center>
+                                        </uib-accordion>
+                                        <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.pr1.$invalid && (vm.ResgisterInvestor.pr1.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                            <select class="form-control selectpicker" title="Select Stream"
+                                                selectpicker ng-model="insert.point_of_interest1" id="pr1" name="pr1" required>
+                                                <option>Machine_Learning</option>
+                                                <option>Data_Science</option>
+                                                <option>Data_Analytics</option>
+                                                <option>Artificial_Intelligence</option>
+                                                <option>Deep_Learning</option>
+                                                <option>Human_Computer_Interface</option>
+                                                <option>Robotics</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 col-lg-4">
+                                        <uib-accordion>
+                                            <center>
+                                                <uib-accordion-group heading="Priority 2" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                                </uib-accordion-group>
+                                            </center>
+                                        </uib-accordion>
+                                        <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.pr2.$invalid && (vm.ResgisterInvestor.pr2.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                            <select class="form-control selectpicker" title="Select Stream"
+                                                selectpicker ng-model="insert.point_of_interest2" id="pr2" name="pr2" required>
+                                                <option>Machine_Learning</option>
+                                                <option>Data_Science</option>
+                                                <option>Data_Analytics</option>
+                                                <option>Artificial_Intelligence</option>
+                                                <option>Deep_Learning</option>
+                                                <option>Human_Computer_Interface</option>
+                                                <option>Robotics</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+                                        <uib-accordion>
+                                            <center>
+                                                <uib-accordion-group heading="Priority 3" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                                </uib-accordion-group>
+                                            </center>
+                                        </uib-accordion>
+                                        <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.pr3.$invalid && (vm.ResgisterInvestor.pr3.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                            <select class="form-control selectpicker" title="Select Stream"
+                                                selectpicker ng-model="insert.point_of_interest3" id="pr3" name="pr3" required>
+                                                <option>Machine_Learning</option>
+                                                <option>Data_Science</option>
+                                                <option>Data_Analytics</option>
+                                                <option>Artificial_Intelligence</option>
+                                                <option>Deep_Learning</option>
+                                                <option>Human_Computer_Interface</option>
+                                                <option>Robotics</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-lg-4">
+                                    <uib-accordion>
+                                        <center>
+                                            <uib-accordion-group heading="Priority 4" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                            </uib-accordion-group>
+                                        </center>
+                                    </uib-accordion>
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.pr4.$invalid && (vm.ResgisterInvestor.pr4.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                         <select class="form-control selectpicker" title="Select Stream" selectpicker
+                                            ng-model="insert.point_of_interest4" id="pr4" name="pr4" required>
+                                            <option>Machine_Learning</option>
+                                            <option>Data_Science</option>
+                                            <option>Data_Analytics</option>
+                                            <option>Artificial_Intelligence</option>
+                                            <option>Deep_Learning</option>
+                                            <option>Human_Computer_Interface</option>
+                                            <option>Robotics</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 col-lg-4">
+                                    <uib-accordion>
+                                        <center>
+                                            <uib-accordion-group heading="Priority 5" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                            </uib-accordion-group>
+                                        </center>
+                                    </uib-accordion>
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.pr5.$invalid && (vm.ResgisterInvestor.pr5.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <select class="form-control selectpicker" title="Select Stream" selectpicker
+                                            ng-model="insert.point_of_interest5" id="pr5" name="pr5" required>
+                                            <option>Machine_Learning</option>
+                                            <option>Data_Science</option>
+                                            <option>Data_Analytics</option>
+                                            <option>Artificial_Intelligence</option>
+                                            <option>Deep_Learning</option>
+                                            <option>Human_Computer_Interface</option>
+                                            <option>Robotics</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <uib-accordion>
+                                        <center>
+                                            <uib-accordion-group heading="Priority 6" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                            </uib-accordion-group>
+                                        </center>
+                                    </uib-accordion>
+                                    <div class="form-group" ng-class="{'has-error': vm.ResgisterInvestor.pr6.$invalid && (vm.ResgisterInvestor.pr6.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                        <select class="form-control selectpicker" title="Select Stream" selectpicker
+                                            ng-model="insert.point_of_interest6" id="pr6" name="pr6" required>
+                                            <option>Machine_Learning</option>
+                                            <option>Data_Science</option>
+                                            <option>Data_Analytics</option>
+                                            <option>Artificial_Intelligence</option>
+                                            <option>Deep_Learning</option>
+                                            <option>Human_Computer_Interface</option>
+                                            <option>Robotics</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <center>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="checkbox" ng-class="{'has-error': vm.ResgisterInvestor.check1.$invalid && (vm.ResgisterInvestor.check1.$dirty || vm.ResgisterInvestor.$submitted)}">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" id="check1" name="check1" ng-model="vm.ResgisterInvestor.check1" ng-click="storeDetails(insert.name,insert.email,insert.linkedin_url,insert.city,insert.mob_no,insert.represent,
+                                                insert.i_name,insert.i_url,insert.point_of_interest1,insert.point_of_interest2,insert.point_of_interest3,insert.point_of_interest4,
+                                                insert.point_of_interest5,insert.point_of_interest6,insert.pass)" required>
+                                                <span> I undertake that all information provided by me is accurate and
+                                                    I am willing to
+                                                    provide KYC information when requested.</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </center>
+                       </div>
+                    </form>
+
+                </ba-wizard-step>
+                <ba-wizard-step title="History Info" form="vm.historyinfoForm">
+                    <form name="vm.historyinfoForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group has-feedback" ng-class="{'has-error': vm.historyinfoForm.productName.$invalid && (vm.historyinfoForm.productName.$dirty || vm.historyinfoForm.$submitted)}">
+                                    <label for="productName">Product name</label>
+                                    <input type="text" class="form-control" id="productName" name="productName"
+                                        placeholder="Product name" ng-model="vm.historyinfo.productName" required>
+                                    <span class="help-block error-block basic-block">Required</span>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error': vm.historyinfoForm.productId.$invalid && (vm.historyinfoForm.productId.$dirty || vm.historyinfoForm.$submitted)}">
+                                    <label for="productId">Product id</label>
+                                    <input type="text" class="form-control" id="productId" name="productId" placeholder="productId"
+                                        ng-model="vm.historyinfo.productId" required>
+                                    <span class="help-block error-block basic-block">Required</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="productName">Category</label>
+                                    <select class="form-control" title="Category" selectpicker>
+                                        <option selected>Electronics</option>
+                                        <option>Toys</option>
+                                        <option>Accessories</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </ba-wizard-step>
+                <ba-wizard-step title="Shipment" form="vm.addressForm">
+                    <form name="vm.addressForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group has-feedback" ng-class="{'has-error': vm.addressForm.address.$invalid && (vm.addressForm.address.$dirty || vm.addressForm.$submitted)}">
+                                    <label for="productName">Shipment address</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Shipment address"
+                                        ng-model="vm.shipment.address" required>
+                                    <span class="help-block error-block basic-block">Required</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="productName">Shipment method</label>
+                                    <select class="form-control" title="Category" selectpicker>
+                                        <option selected>Fast & expensive</option>
+                                        <option>Cheap & free</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label class="custom-checkbox">
+                                <input type="checkbox">
+                                <span>Save shipment info</span>
+                            </label>
+                        </div>
+                    </form>
+                </ba-wizard-step>
+                <ba-wizard-step title="Finish">
+                    <form class="form-horizontal" name="vm.finishForm" novalidate>
+                        Congratulations! You have successfully filled the form!
+                    </form>
+                </ba-wizard-step>
+            </ba-wizard>
+        </div>
+    </div>
+</div>
+
+</div>

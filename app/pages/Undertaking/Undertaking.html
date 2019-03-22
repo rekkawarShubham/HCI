@@ -1,0 +1,106 @@
+<form name="UndertakingForm" ng-submit="storeUndertaking(mis, branch, place, date, parentname, mobno, address, email)">
+  <div class="row">
+    <div class="panel panel-default bootstrap-panel">
+      <div class="panel-heading">
+        <center>Read the Rules and Document Carefully</center>
+      </div>
+      <div class="panel-body">
+        <p>I declare that all the statements made in this application are true, complete and correct to the best of my
+          knowledge
+          and belief. I have read rules and shall abide by the rules and regulations of the Hostel in force during the
+          course of my
+          stay, and I understand that the authority reserves every right to cancel my hostel admission at any time upon
+          violation of
+          the rules.</p>
+        <p>1. At the time of hostel admission, I will pay total hostel fees and deposit by online mode only as per the
+          institute norms.</p>
+        <p>2. I will not indulge in any kind of ragging. I am aware that my involvement in any ragging activity will
+          lead to direct
+          FIR against me, and I will be expelled immediately from the institute.</p>
+        <p>3. I hereby agree to abide by the rules and regulations of the Hostels, if admitted, and I will be liable
+          for punishment, in
+          case I am found disobeying or guilty. I voluntarily agree to be a member of hostel mess and agree to pay the
+          necessary
+          charges and abide by the relevant rules.</p>
+        <p>4. I shall see that my room & the premises are kept clean and I shall observe the discipline.</p>
+        <p>5. If I opt for summer term accommodation, I shall pay the required maintenance charges of hostel.</p>
+        <p>6. I am aware that, hostel authorities do not accord permission for non-academic picnics/excursions.</p>
+        <p>7. At the time of hostel room allotment I will submit the parents undertaking form.
+          <p>8. The students staying in the area of Pune Municipal Corporation (PMC) and Pimpri Chinchwad Municipal
+            Corporation (PCMC) are not eligible for Hostel Admission.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="mis">MIS No.</label>
+        <input type="text" class="form-control" id="mis" ng-model="mis" placeholder=" Enter mis" required>
+        <span class="help-block error-block basic-block">Name Required</span>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="branch">Branch</label>
+        <input type="text" class="form-control" id="branch" ng-model="branch" placeholder="Enter branch" required>
+        <span class="help-block error-block basic-block">Branch Name Required</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="place">Place</label>
+        <input type="text" class="form-control" id="place" ng-model="place" placeholder=" Enter Place" required>
+        <span class="help-block error-block basic-block">Place Required</span>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="text" class="form-control" id="date" ng-model="date" placeholder="Enter Date" required>
+        <span class="help-block error-block basic-block">Date Required</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="parentname">Parent Name</label>
+        <input type="text" class="form-control" id="parentname" ng-model="parentname" placeholder="Enter Parent Name"
+          required>
+        <span class="help-block error-block basic-block"></span>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="mobno">Mobile No.</label>
+        <input type="text" class="form-control" id="mobno" ng-model="mobno" placeholder="Enter Mobile Number " required>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="address">Permanent Address</label>
+        <input type="text" class="form-control" id="address" ng-model="address" placeholder="Enter Address" required>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" ng-model="email" placeholder="Enter Email" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="checkbox">
+        <label class="custom-checkbox">
+          <input type="checkbox" required>
+          <span> I Accept all rules.</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <center><button type="submit" class="btn btn-info">Submit</button></center>
+</form>

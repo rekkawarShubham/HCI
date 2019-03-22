@@ -1,0 +1,89 @@
+
+  <div style="width: 50%;float: left;" align="center">
+
+    <table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+      <tbody>
+        <tr ng-repeat="item in smartTableData" align="center">
+          <td ng-if="$odd">
+
+            <div style="border:1px solid #aeb1b2;border-radius: 10px;">
+              <div class="panel-body" style="background-color:#bbdefb;border-bottom:1px solid #aeb1b2">
+                <img src="{{item.logo_url}}" height="200" width="100%">
+              </div>
+              <div>
+                <font style=" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 700;font-size: 20px ">{{item.fund_name}}</font>
+              </div>
+              <div style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 17px;">
+
+                <div style="float: left;padding-left: 3%">Location:</div>
+                <div style="float: left;">{{item.location}}</div><br>
+                <div style="float: left;padding-left: 3%">No of funded Startups:</div>
+                <div style="float: left;">{{item.no_of_investee_startup}}</div><br>
+
+              </div>
+              <div style="height:50px; ;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 17px;">
+                  <button style="width: 50%;float: left; height: 100%;background-color: #2196f3;color: white;" ng-click="see_investor(item.SEBI_regno)">View More <img src="https://pngimage.net/wp-content/uploads/2018/06/view-png-image-5.png" height="20" width="20" ></button>
+                  <button style="width: 50%;float: right; height: 100%;background-color: #64b5f6;color: black;" ng-click ="raise_fund(item.SEBI_regno)">Raise Fund<i class="fas fa-hand-holding-usd"></i></button>             
+
+                </div>
+          
+          
+            </div>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+      <!-- <tfoot>
+      <tr>
+        <td colspan="6" class="text-center">
+          <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+        </td>
+      </tr>
+    </tfoot> -->
+    </table>
+  </div>
+
+
+  <div style="width: 50%;float:right;">
+    <table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+      <tbody>
+        <tr ng-repeat="item in smartTableData" align="center">
+          <td ng-if="$even">
+
+            <div style="border:1px solid #aeb1b2;border-radius: 10px;">
+              <div class="panel-body" style="background-color:#9ffce6;border-bottom:1px solid #aeb1b2">
+                <img src="{{item.logo_url}}" alt="No image Found" height="200" width="100%">
+              </div>
+              <div>
+                <font style=" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-weight: 700;font-size: 20px ">{{item.fund_name}}</font>
+              </div>
+              <div style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 17px;">
+
+                <div style="float: left;padding-left: 3%">Location:</div>
+                <div style="float: left;">{{item.location}}</div><br>
+                <div style="float: left;padding-left: 3%">No of funded Startups:</div>
+                <div style="float: left;">{{item.no_of_investee_startup}}</div><br>
+
+              </div>
+              <div style="height:50px; ;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 17px;">
+                  <button style="width: 50%;float: left; height: 100%;background-color: #2196f3;color: white;" ng-click="see_investor(item.SEBI_regno)" >View More <img src="https://pngimage.net/wp-content/uploads/2018/06/view-png-image-5.png" height="20" width="20" ></button>
+                  <button style="width: 50%;float: right; height: 100%;background-color: #64b5f6;color: black;" ng-click ="raise_fund(item.SEBI_regno)" >Raise Fund <i class="fas fa-hand-holding-usd"></i></button>             
+              </div>
+ 
+            </div>
+            <br>
+          </td>
+        </tr>
+      </tbody>
+      <!-- <tfoot>
+          <tr>
+            <td colspan="6" class="text-center">
+              <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+            </td>
+          </tr>
+        </tfoot> -->
+    </table>
+  </div>
+
+
+</div>

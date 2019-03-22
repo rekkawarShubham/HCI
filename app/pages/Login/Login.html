@@ -1,0 +1,60 @@
+<uib-tabset>
+    <div class="panel panel-info bootstrap-panel">
+        <div class="panel-heading">
+            <center>LOGIN</center>
+        </div>
+        <div class="panel-body">
+            <div class="ng-cloak" ng-controller="LoginPageCtrl as selectpickerVm">
+                <form name="ApplicationForm" ng-submit="getDetails(insert.email,insert.password,selectpickerVm.selectedItem.selected)">
+
+                    <div class="form-group">
+                        <div class="col-md-3">
+                        </div>
+
+                        <div class="col-md-6">
+                            <ui-select ng-model="selectpickerVm.selectedItem.selected" class="btn-group bootstrap-select form-control"
+                                ng-disabled="false" append-to-body="true" search-enabled="false">
+                                <ui-select-match placeholder="User Type">
+                                    <span> {{$select.selected.label}}</span>
+                                </ui-select-match>
+                                <ui-select-choices repeat="standardItem in selectpickerVm.standardSelectItems | filter: $select.search">
+                                    <span ng-bind-html="standardItem.label"></span>
+                                </ui-select-choices>
+                            </ui-select>
+                            <br><br>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email">Email</label>
+                            <input type="mail" class="form-control" name="email" id="email" ng-model="insert.email"
+                                placeholder="Email" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" ng-model="insert.password"
+                                placeholder="Password" required>
+                        </div>
+
+                        <div class="row">
+                            <center>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-12 col-lg-4">
+                                    <br><br><br>
+                                    <button progress-button="" class="btn btn-info" ng-click="register()">REGISTER</button>
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <br><br><br>
+                                    <button progress-button="" type="submit" class="btn btn-info" name="insert">LOGIN</button>
+                                </div>
+                            </center>
+
+                        </div>
+
+                    </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+</uib-tabset>

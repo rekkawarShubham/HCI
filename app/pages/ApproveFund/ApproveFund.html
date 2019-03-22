@@ -1,0 +1,89 @@
+<div class="col-md-2"></div>
+
+<table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+    <tbody>
+        <tr ng-repeat="item in smartTableData" align="center">
+            <td>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="panel panel-info bootstrap-panel">
+                        <div class="panel-heading">
+                            <center><code>APPROVE</code>REQUESTED FUND</center>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group has-success">
+                                <div class="col-md-2"></div>
+                                <div class="col-xlg-6 col-lg-4 col-md-4 col-sm-8 col-xs-8">
+                                    <div class="row">
+                                        <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12">
+                                            <div class="popular-app-img">
+                                                <img ng-src="{{ item.st_logo_url }}" id="startup" name="startup"
+                                                    ng-model="startup" height="140" width="180" />
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popular-app-img-container">
+                                    <div class="popular-app-img">
+                                        <img ng-src="{{ item.inv_logo_url }}" id="investor" name="investor" ng-model="investor"
+                                            height="140" width="180" />
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="cin">CIN No</label>
+                                    <input type="text" class="form-control" name="cin" id="cin" ng-model="item.cin"
+                                        readonly style="color: black;font-weight: bold" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="investor_id">Investor ID</label>
+                                    <input type="text" class="form-control" name="inv_id" id="inv_id" ng-model="item.inv_id"
+                                        style="color: black;font-weight: bold" readonly required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="name_startup">Startup Name</label>
+                                    <input type="text" class="form-control" name="startup_name" id="startup_name"
+                                        ng-model="item.startup_name" style="color: black;font-weight: bold" readonly
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="fund_name">Fund Name</label>
+                                    <input type="text" class="form-control" name="fund_name" id="fund_name" ng-model="item.fund_name"
+                                        style="color: black;font-weight: bold" readonly required>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <label for="fund_req">Fund Requested</label>
+                                    <input type="text" class="form-control" name="req_amt" id="req_amt" ng-model="item.req_amt"
+                                        style="color: black;font-weight: bold" readonly required>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-2"></div>
+                                <div class="col-md-12 col-lg-4"><br>
+                                    <button class="btn btn-danger editable-table-button btn-xs" ng-click="showModal(item)">REJECT</button>
+                                </div>
+
+                                <div class="col-md-12 col-lg-4"><br>
+                                    <button class="btn btn-success editable-table-button btn-xs" ng-click="approve_fund(item)">Approve</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

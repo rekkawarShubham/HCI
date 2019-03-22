@@ -1,0 +1,57 @@
+<div class="horizontal-scroll">
+  <div class="form-group select-page-size-wrap ">
+    <label>Rows on page
+      <select class="form-control selectpicker show-tick" title="Rows on page" selectpicker ng-model="smartTablePageSize"
+        ng-options="i for i in [5,10,15,20,25]">
+      </select>
+    </label>
+  </div>
+  <table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+    <thead>
+      <tr class="sortable ">
+        <th class="table-id" st-sort="mis">Mis NO</th>
+        <th st-sort="name">Name</th>
+        <th st-sort="branch">Branch</th>
+        <th st-sort="status" st-sort-default="reverse" st-skip-natural="true">Status</th>
+        <th st-sort="appliedyear">Applied year</th>
+        <th st-sort="grievance"> Grievance</th>
+
+        <th>Actions</th>
+
+      </tr>
+      <tr>
+        <th></th>
+        <th><input st-search="name" placeholder="Search Name" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="branch" placeholder="Search Branch" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="status" placeholder="Search Status" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="appliedyear" placeholder="Search Applied Year" class="input-sm form-control search-input"
+            type="search" />
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr ng-repeat="item in smartTableData">
+        <td class="table-id">{{item.mis}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.branch}}</td>
+        <td>{{item.status}}</td>
+        <td>{{item.appliedyear}}</td>
+        <td>{{item.grievance}}</td>
+        <td>
+          <button class="btn btn-success editable-table-button btn-xs" ng-click="approveUser(item.mis)">Approve</button>
+          <button class="btn btn-danger editable-table-button btn-xs" ng-click="showModal(item)">Delete</button>
+        </td>
+
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6" class="text-center">
+          <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

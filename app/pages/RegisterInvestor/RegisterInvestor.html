@@ -1,0 +1,288 @@
+<div class="panel panel-info bootstrap-panel">
+    <div class="panel-heading">
+        <center>Tell Us About Yourself</center>
+    </div>
+    <form name="RegisterInvestor" ng-submit="storeDetails(insert.name,insert.email,insert.linkedin_url,insert.city,insert.mob_no,insert.represent,insert.i_name,insert.i_url,insert.password,insert.cpassword,insert.selectpickerVm.withDeleteItem.selected)">
+        <div class="form-group">
+            <div class="row"><br>
+
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" id="name" ng-model="insert.name"
+                            placeholder="Enter Full Name" required>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" ng-model="insert.email"
+                            placeholder="Enter Email" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <input type="url" class="form-control" name="linkedin_url" id="linkedin_url" ng-model="insert.linkedin_url"
+                            placeholder="Enter Linkedin URL" required>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+
+                        <input type="text" class="form-control" name="city" id="city" ng-model="insert.city"
+                            placeholder="Enter City" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <input type="tel" class="form-control" name="mob_no" id="mob_no" ng-model="insert.mob_no"
+                            placeholder="+91" required>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <select class="form-control selectpicker" title="Who are you representing" selectpicker name="represent"
+                            id="represent" ng-model="insert.represent" required>
+                            <option>Individual Investor</option>
+                            <option>Accelerator/Incubator</option>
+                            <option>Family Office</option>
+                            <option>VC Fund</option>
+                            <option>Angel Network</option>
+                            <option>Corporate Fund</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="i_name" id="i_name" ng-model="insert.i_name"
+                            placeholder="Enter Institution Name" required>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-group">
+                        <input type="url" class="form-control" name="i_url" id="i_url" ng-model="insert.i_url"
+                            placeholder="Enter Institution Website" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                    <center><label for="interest"><b>GIVE YOUR POINT OF INTERESTS</b></label></center>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-4">
+                            <uib-accordion>
+                                <center>
+                                <uib-accordion-group heading="Priority 1" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                </uib-accordion-group>
+                            </center>
+                            </uib-accordion>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" title="Select Stream" selectpicker ng-model="point_of_interest1"
+                                    required>
+                                    <option>Machine_Learning</option>
+                                    <option>Data_Science</option>
+                                    <option>Data_Analytics</option>
+                                    <option>Artificial_Intelligence</option>
+                                    <option>Deep_Learning</option>
+                                    <option>Human_Computer_Interface</option>
+                                    <option>Robotics</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                        <div class="col-md-12 col-lg-4">
+                            <uib-accordion>
+                                <center>
+                                    <uib-accordion-group heading="Priority 2" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                    </uib-accordion-group>
+                                </center>
+                            </uib-accordion>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" title="Select Stream" selectpicker ng-model="point_of_interest2"
+                                    required>
+                                    <option>Machine_Learning</option>
+                                    <option>Data_Science</option>
+                                    <option>Data_Analytics</option>
+                                    <option>Artificial_Intelligence</option>
+                                    <option>Deep_Learning</option>
+                                    <option>Human_Computer_Interface</option>
+                                    <option>Robotics</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-4">
+                            <uib-accordion>
+                                <center>
+                                    <uib-accordion-group heading="Priority 3" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                    </uib-accordion-group>
+                                </center>
+                            </uib-accordion>
+                            <div class="form-group">
+                                <select class="form-control selectpicker" title="Select Stream" selectpicker ng-model="point_of_interest3"
+                                    required>
+                                    <option>Machine_Learning</option>
+                                    <option>Data_Science</option>
+                                    <option>Data_Analytics</option>
+                                    <option>Artificial_Intelligence</option>
+                                    <option>Deep_Learning</option>
+                                    <option>Human_Computer_Interface</option>
+                                    <option>Robotics</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                        <uib-accordion>
+                            <center>
+                                <uib-accordion-group heading="Priority 4" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                </uib-accordion-group>
+                            </center>
+                        </uib-accordion>
+                        <div class="form-group">
+                            <select class="form-control selectpicker" title="Select Stream" selectpicker ng-model="point_of_interest4"
+                                required>
+                                <option>Machine_Learning</option>
+                                <option>Data_Science</option>
+                                <option>Data_Analytics</option>
+                                <option>Artificial_Intelligence</option>
+                                <option>Deep_Learning</option>
+                                <option>Human_Computer_Interface</option>
+                                <option>Robotics</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-12 col-lg-4">
+                        <uib-accordion>
+                            <center>
+                                <uib-accordion-group heading="Priority 5" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                </uib-accordion-group>
+                            </center>
+                        </uib-accordion>
+                        <div class="form-group">
+                            <select class="form-control selectpicker" title="Select Stream" selectpicker ng-model="point_of_interest5"
+                                required>
+                                <option>Machine_Learning</option>
+                                <option>Data_Science</option>
+                                <option>Data_Analytics</option>
+                                <option>Artificial_Intelligence</option>
+                                <option>Deep_Learning</option>
+                                <option>Human_Computer_Interface</option>
+                                <option>Robotics</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <uib-accordion>
+                            <center>
+                                <uib-accordion-group heading="Priority 6" panel-class="panel-primary bootstrap-panel accordion-panel">
+                                </uib-accordion-group>
+                            </center>
+                        </uib-accordion>
+                        <div class="form-group">
+                            <select class="form-control selectpicker" title="Select Stream" selectpicker ng-model="point_of_interest6"
+                                required>
+                                <option>Machine_Learning</option>
+                                <option>Data_Science</option>
+                                <option>Data_Analytics</option>
+                                <option>Artificial_Intelligence</option>
+                                <option>Deep_Learning</option>
+                                <option>Human_Computer_Interface</option>
+                                <option>Robotics</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+              
+            
+
+            <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="form-group">
+                           
+                            <input type="password" class="form-control" name="password" id="password" ng-model="insert.password"
+                                placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="form-group">
+                        
+                            <input type="password" class="form-control" name="cpassword" id="cpassword" ng-model="insert.cpassword"
+                                placeholder="Confirm Password" required>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                        <div class="ng-cloak" ng-controller="RegisterInvestorPageCtrl as selectpickerVm">
+                        <div class="form-group ">
+                                <div class="input-group">
+        
+                                  <ui-select multiple
+                                             ng-model="insert.selectpickerVm.withDeleteItem.selected"
+                                             ng-disabled="false"
+                                             search-enabled="true"
+                                             append-to-body="true"
+                                             id="selectpickerVm.withDeleteItem.selected"
+                                             name="selectpickerVm.withDeleteItem.selected"
+                                             class="form-control form-control">
+                                    <ui-select-match placeholder="Select With Clear Button">
+                                      {{$item.label}}
+                                    </ui-select-match>
+                                    <ui-select-choices
+                                        repeat="withDeleteItem in selectpickerVm.withDeleteSelectItems | filter: $select.search">
+                                      {{withDeleteItem.label}}
+                                    </ui-select-choices>
+                                  </ui-select>
+                                  <span class="input-group-btn">
+                                    <button type="button" ng-click="selectpickerVm.withDeleteItem.selected = undefined"
+                                           class="btn btn-danger">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                  </span>
+                                </div>
+                              </div>
+                              </div>
+                </div> -->
+
+                <center>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" required>
+                                        <span> I undertake that all information provided by me is accurate and I am willing to
+                                            provide KYC information when requested.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                    <center>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" required>
+                                        <span> I hereby certify that the above given information is true and accurate.</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+
+            <div class="row"><br>
+                <center><button class="btn btn-info btn-lg" type="submit" pb-style="flip-open" name="insert">Proceed</button>
+                </center>
+            </div>
+            <br>
+        </div>
+    </form>
+</div>

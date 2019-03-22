@@ -1,0 +1,229 @@
+<div class="row">
+  <div class=" col-lg-11"></div><button class="btn btn-info" ng-click="loadprofile()">Profile</button>
+</div>
+<br><br>
+<uib-tabset>
+  <div class="panel panel-info bootstrap-panel">
+    <div class="panel-heading">
+      <center>BOOK YOUR SEATS</center>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xlg-6 col-lg-4 col-md-4 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+              <div class="popular-app-img-container">
+                <div class="popular-app-img">
+                  <center><img ng-src="{{::( 'app/audi.jpg' | appImage )}}" height="140" width="180" />
+                    <span class="logo-text">Auditorium</span>
+                </div>
+                </center>
+              </div>
+              <div class="popular-app-cost row">
+                <div class="col-xs-9">
+                  Total Seats : 200
+                </div>
+              </div>
+              <div class="popular-app-info row">
+                <div class="col-xs-4 text-left">
+                  <div class="info-label">Seat Booked</div>
+                  <div>140</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <div class="info-label">Remaining Seats</div>
+                  <div>60</div>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <div class="info-label"></div>
+                  <div><button class="btn btn-info" ng-click="auditorium()">Book Seat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+              <div class="popular-app-img-container">
+                <div class="popular-app-img">
+                  <center><img ng-src="{{::( 'app/library.jpg' | appImage )}}" height="140" width="180" />
+                    <span class="logo-text">Library</span>
+                </div>
+                </center>
+              </div>
+              <div class="popular-app-cost row">
+                <div class="col-xs-9">
+                  Total Seats : 450
+                </div>
+              </div>
+              <div class="popular-app-info row">
+                <div class="col-xs-4 text-left">
+                  <div class="info-label">Seat Booked</div>
+                  <div>240</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <div class="info-label">Remaining Seats</div>
+                  <div>210</div>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <div class="info-label"></div>
+                  <div><button class="btn btn-info" ng-click="library()">Book Seat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+              <div class="popular-app-img-container">
+                <div class="popular-app-img">
+                  <center><img ng-src="{{::( 'app/function_hall.jpg' | appImage )}}" height="140" width="180" />
+                    <span class="logo-text">Function Hall</span>
+                </div>
+                </center>
+              </div>
+              <div class="popular-app-cost row">
+                <div class="col-xs-9">
+                  Total Seats : 150
+                </div>
+              </div>
+              <div class="popular-app-info row">
+                <div class="col-xs-4 text-left">
+                  <div class="info-label">Seat Booked</div>
+                  <div>120</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <div class="info-label">Remaining Seats</div>
+                  <div>30</div>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <div class="info-label"></div>
+                  <div><button class="btn btn-info" ng-click="tutorial()">Book Seat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="col-xlg-6 col-lg-4 col-md-4 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+              <div class="popular-app-img-container">
+                <div class="popular-app-img">
+                  <center><img ng-src="{{::( 'app/it.jpg' | appImage )}}" height="140" width="180" />
+                    <span class="logo-text">IT Hall</span>
+                </div>
+                </center>
+              </div>
+              <div class="popular-app-cost row">
+                <div class="col-xs-9">
+                  Total Seats : 150
+                </div>
+              </div>
+              <div class="popular-app-info row">
+                <div class="col-xs-4 text-left">
+                  <div class="info-label">Seat Booked</div>
+                  <div>130</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <div class="info-label">Remaining Seats</div>
+                  <div>20</div>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <div class="info-label"></div>
+                  <div><button class="btn btn-info" ng-click="it_hall()">Book Seat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+              <div class="popular-app-img-container">
+                <div class="popular-app-img">
+                  <center><img ng-src="{{::( 'app/computer.jpg' | appImage )}}" height="140" width="180" />
+                    <span class="logo-text">Computer Hall</span>
+                </div>
+                </center>
+              </div>
+              <div class="popular-app-cost row">
+                <div class="col-xs-9">
+                  Total Seats : 250
+                </div>
+              </div>
+              <div class="popular-app-info row">
+                <div class="col-xs-4 text-left">
+                  <div class="info-label">Seat Booked</div>
+                  <div>140</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <div class="info-label">Remaining Seats</div>
+                  <div>110</div>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <div class="info-label"></div>
+                  <div><button class="btn btn-info" ng-click="computer_hall()">Book Seat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+              <div class="popular-app-img-container">
+                <div class="popular-app-img">
+                  <center><img ng-src="{{::( 'app/reading.jpg' | appImage )}}" height="140" width="180" />
+                    <span class="logo-text">Reading Hall</span>
+                </div>
+                </center>
+              </div>
+              <div class="popular-app-cost row">
+                <div class="col-xs-9">
+                  Total Seats : 400
+                </div>
+              </div>
+              <div class="popular-app-info row">
+                <div class="col-xs-4 text-left">
+                  <div class="info-label">Seat Booked</div>
+                  <div>170</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <div class="info-label">Remaining Seats</div>
+                  <div>230</div>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <div class="info-label"></div>
+                  <div><button class="btn btn-info" ng-click="reading_hall()">Book Seat</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</uib-tabset>
+<div class="row">
+  <center><button class="btn btn-info" ng-click="my_bookings()">Bookings</button></center>
+</div>

@@ -1,0 +1,73 @@
+<div ba-panel>
+  <section id="cd-timeline" class="cd-container cssanimations" ng-controller="TimelineCtrl">
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img">
+        <div class="kameleon-icon with-round-bg "><img ng-src="{{ pic }}" ng-model="pic" id="pic" name="pic"></div>
+      </div>
+
+      <div class="cd-timeline-content warning">
+        <h5>Profile Generation</h5>
+
+        <input type="text" class="form-control" name="profile" id="profile" ng-model="profile" readonly placeholder="Profile Not Generated"
+          style="color: black;font-weight: bold">
+
+      </div>
+    </div>
+
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img">
+        <div class="kameleon-icon with-round-bg "><img ng-src="{{ pic1 }}" ng-model="pic1" id="pic1" name="pic1"></div>
+
+      </div>
+
+      <div class="cd-timeline-content primary">
+        <h5>Startup Verfication Status</h5>
+
+        <input type="text" class="form-control" name="verfication" id="verfication" ng-model="verfication" readonly
+          placeholder="Verfication Not Done." style="color: black;font-weight: bold">
+
+      </div>
+    </div>
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img">
+        <div class="kameleon-icon with-round-bg "><img ng-src="{{ pic2 }}" ng-model="pic2" id="pic2" name="pic2"></div>
+      </div>
+
+      <div class="cd-timeline-content danger">
+        <h5>Applied for Fund Raised </h5>
+        <input type="text" class="form-control" name="fund" id="fund" ng-model="fund" readonly placeholder="Fund Not Raised"
+          style="color: black;font-weight: bold">
+
+      </div>
+    </div>
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img">
+        <div class="kameleon-icon with-round-bg "><img ng-src="{{ pic3 }}" ng-model="pic3" id="pic3" name="pic3"></div>
+      </div>
+      <div class="cd-timeline-content primary">
+        <h5>Status of Fund Raised</h5>
+        <input type="text" class="form-control" name="fund_status" id="fund_status" ng-model="fund_status" readonly
+          placeholder=" Not Done." style="color: black;font-weight: bold">
+
+      </div>
+    </div>
+
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img">
+        <div class="kameleon-icon with-round-bg primary"><img ng-src="{{ pic4 }}" ng-model="pic4" id="pic4" name="pic4"></div>
+
+      </div>
+
+      <div class="cd-timeline-content warning">
+        <h5>Meeting Schedule</h5>
+
+        <input type="text" class="form-control" name="meeting" id="meeting" ng-model="meeting" readonly
+          placeholder="Meeting Not Done." style="color: black;font-weight: bold">
+
+      </div>
+    </div>
+  </section>
+</div>

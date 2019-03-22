@@ -1,0 +1,128 @@
+<div class="panel panel-default bootstrap-panel">
+  <center>
+    <div class="panel-heading" style="font-weight: bold ">
+      Startup Information
+    </div>
+  </center>
+  <div class="panel-body">
+
+    <div class="row">
+      <div class="panel panel-default bootstrap-panel">
+        <div class="panel-body" style="font-weight: bold;font-size: 20px;">
+
+          <div class="col-md-1">
+            <img height="75" width="75" ng-src="{{ image }}" id="image" ng-model="image" style="border-radius: 50%;">
+          </div>
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-2">
+            <br>
+            <span style="font-size:30px;font-weight: bold;" ng-model="name"> {{ name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-15 col-lg-8">
+        <iframe width="600" height="315" src="https://www.youtube.com/embed/DHf6Z_nJsCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+
+
+      <div class="col-md-12 col-lg-4">
+        <div class="panel panel-default bootstrap-panel">
+
+          <div class="panel-body">
+
+            <div class="row">
+              <div class="col-md-16 col-lg-12">
+                <div class="panel panel-default bootstrap-panel">
+                  <div class="panel-body">
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span ng-model="cin"><b>CIN:</b> {{cin}}</span>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span ng-model="category"><b>category:</b>{{category}}</span>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <span ng-model="fundreceived"><b>Fund Received:</b> {{fundreceived}}</span>
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+
+
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="row">
+              <div class="col-md-16 col-lg-12">
+                <button class="btn btn-info btn-lg" style="width: 100%"> Invest in {{startup_name}} </button>
+              </div>
+            </div>
+            <br><br>
+            <div class="row">
+              <div class="col-md-16 col-lg-12">
+                <button class="btn btn-success btn-lg" style="width: 100%"> Make a Video Call </button>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs  -->
+    <uib-tabset active="$tabSetStatus.activeTab">
+      <uib-tab heading="Founders">
+          {{ founders }}
+      </uib-tab>
+      <uib-tab heading="Funding Details">
+        {{ funding_details }}
+      </uib-tab>
+
+      <uib-tab heading="About Startup">
+        {{ details }}
+      </uib-tab>
+
+      <uib-tab heading="Location">
+        <div ba-panel ba-panel-title="Google Maps" class="viewport100">
+          <div id="google-maps"></div>
+        </div>
+
+      </uib-tab>
+
+
+    </uib-tabset>
+
+
+
+
+
+
+
+  </div>
+</div>
+</div>

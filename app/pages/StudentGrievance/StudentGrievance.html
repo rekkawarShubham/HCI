@@ -1,0 +1,65 @@
+<form name="ApplicationForm" ng-submit="storeGrievance(insert.name, insert.mis, insert.appliedyear, insert.status, insert.grievance,selectpickerVm.selectedItemBranch.selected)">
+  <div class="ng-cloak" ng-controller="StudentGrievancePageCtrl as selectpickerVm">
+    <uib-tabset>
+      <div class="panel panel-primary bootstrap-panel">
+        <div class="panel-heading">
+          <center>APPLY FOR ADMISSION PROCESS</center>
+        </div>
+        <div class="panel-body">
+          <div class="widgets">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" ng-model="insert.name" placeholder="Enter Your Name"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label for="mis">MIS NO</label>
+                <input type="text" class="form-control" id="mis" ng-model="insert.mis" placeholder="Enter Mis NO."
+                  required>
+              </div>
+              <div class="form-group">
+                <label for="appliedyear">Applied Year</label>
+                <input type="text" class="form-control" id="appliedyear" ng-model="insert.appliedyear" placeholder="Enter Applied Year"
+                  required>
+              </div>
+
+              <ui-select ng-model="selectpickerVm.selectedItemBranch.selected" class="btn-group bootstrap-select form-control"
+                ng-disabled="false" append-to-body="true" search-enabled="false">
+                <ui-select-match placeholder="Branch">
+                  <span> {{$select.selected.label}}</span>
+                </ui-select-match>
+                <ui-select-choices repeat="standardItemBranch in selectpickerVm.standardSelectItemsBranch | filter: $select.search">
+                  <span ng-bind-html="standardItemBranch.label"></span>
+                </ui-select-choices>
+              </ui-select> <br><br>
+
+              <div class="form-group">
+                <label for="status">Current Status In Provisional Merit List</label>
+                <input type="text" class="form-control" id="status" ng-model="insert.status" placeholder="Current Status"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label for="grievance">Grievance</label>
+                <input type="text" placeholder="Please fill this grievance" class="form-control" id="grievance"
+                  ng-model="insert.grievance" required>
+              </div>
+
+              <center><button type="submit" class="btn btn-info" name="insert">Submit</button></center>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </uib-tabset>
+  </div>
+</form>

@@ -1,0 +1,48 @@
+<div class="horizontal-scroll">
+  <div class="form-group select-page-size-wrap ">
+    <label>Rows on page
+      <select class="form-control selectpicker show-tick" title="Rows on page" selectpicker ng-model="smartTablePageSize"
+        ng-options="i for i in [5,10,15,20,25]">
+      </select>
+    </label>
+  </div>
+  <table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+    <thead>
+      <tr class="sortable ">
+        <th class="table-id" st-sort="mis">MIS No</th>
+        <th st-sort="name">Name</th>
+        <th st-sort="category">Category</th>
+        <th st-sort="cgpa">CGPA</th>
+        <th st-sort="backlogs">Backlogs</th>
+        <th st-sort="allotment_type">Seat Alloted</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th><input st-search="name" placeholder="Search First Name" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="category" placeholder="Search Last Name" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="cgpa" placeholder="Search Username" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="backlogs" placeholder="Search Backlogs" class="input-sm form-control search-input" type="search" />
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr ng-repeat="item in smartTableData">
+        <td class="table-id">{{item.mis}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.cgpa}}</td>
+        <td>{{item.backlogs}}</td>
+        <td>{{item.allotment_type}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6" class="text-center">
+          <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+<div class="col-md-3"></div>
+<div class="col-md-6">
+        <div class="panel panel-warning bootstrap-panel">
+            <div class="panel-heading">
+                <center>LOGIN</center>
+            </div>
+            <div class="panel-body">
+                <form name="ApplicationForm" ng-submit="getDetails(insert.bank_id,insert.password)">
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="bank_id">Bank ID</label>
+                            <input type="text" class="form-control" name="bank_id" id="bank_id" ng-model="insert.bank_id"
+                                placeholder="Enter Bank ID" required>
+                        </div>
+                        <div class="row">
+                            <label for="pass">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                ng-model="insert.password" placeholder="1234" required>
+                        </div>
+                        <div class="row">
+                            <center>
+                                <div class="col-md-4"></div>
+                                <div class="col-md-12 col-lg-4">
+                                    <br><br><br>
+                                    <button type="submit" class="btn btn-info" name="insert">LOGIN</button>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

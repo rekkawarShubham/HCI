@@ -1,0 +1,88 @@
+<div class="col-md-3"></div>
+<div class="col-md-5">
+  <div class="panel panel-warning bootstrap-panel">
+    <div class="panel-heading">
+      <center><code>PRERIQUISITES</code> For Investor Connect</center>
+    </div>
+    <div class="panel-body">
+      <form name="ApplicationForm" ng-submit="getDetails(insert.f_name,insert.no_founders,insert.female_co_founders,insert.fund_req,insert.caste)">
+        <div class="form-group has-success">
+
+            <div class="row">
+                <center><label for="sebi">Investor ID: </label>
+               <b> {{sebino}}</b></center>
+              </div>
+
+          <div class="row">
+            <label for="f_name">Founder Name</label>
+            <input type="text" class="form-control" name="f_name" id="f_name" ng-model="insert.f_name" placeholder="Enter Founder Name"
+              required>
+          </div>
+          <div class="row">
+            <div class="form-group" ng-class="{'has-error': ApplicationForm.no_founders.$invalid && (ApplicationForm.no_founders.$dirty || ApplicationForm.$submitted)}">
+              <label for="no_founders"><b>How many Female Founders? </b></label>
+              <select class="form-control" title="Female Founders" id="no_founders" name="no_founders" selectpicker
+                ng-model="insert.no_founders" required>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <span class="help-block error-block basic-block">Required</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group" ng-class="{'has-error': ApplicationForm.female_co_founders.$invalid && (ApplicationForm.female_co_founders.$dirty || ApplicationForm.$submitted)}">
+              <label for="female_co_founders"> <b>How many Female Co-Founders ?</b></label>
+              <select class="form-control" title="Female Co-Founders" id="female_co_founders" name="female_co_founders"
+                selectpicker ng-model="insert.female_co_founders" required>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+              <span class="help-block error-block basic-block">Required</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="cin">Fund Required for this Year</label>
+            <input type="text" class="form-control" name="fund_req" id="fund_req" ng-model="insert.fund_req"
+              placeholder="Enter required Amount" required>
+          </div>
+          <div class="row">
+            <div class="form-group" ng-class="{'has-error': ApplicationForm.caste.$invalid && (ApplicationForm.caste.$dirty || ApplicationForm.$submitted)}">
+              <label for="caste">Select Caste For More Benefits</label>
+              <select class="form-control" title="Select Caste" id="caste" name="caste" selectpicker ng-model="insert.caste"
+                required>
+                <option>SCHEDULED CASTE</option>
+                <option>SCHEDULED TRIBES</option>
+                <option>OPEN</option>
+                <option>OTHERS</option>
+              </select>
+              <span class="help-block error-block basic-block">Required</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="caste_certificate">Caste Certificate</label>
+            <div class="form-group">
+              <input type="file" ngf-select="addDocumentsToStorage($file, 'caste_certificate')" ng-model="files" accept=".pdf,.jpg,.png,.csv"
+                ngf-max-height="1000" ngf-max-size="1MB" required />
+            </div>
+          </div>
+          <div class="row">
+            <center>
+              <div class="col-md-4"></div>
+              <div class="col-md-12 col-lg-4">
+                <br><br><br>
+                <button type="submit" class="btn btn-info" name="insert">SUBMIT</button>
+              </div>
+            </center>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

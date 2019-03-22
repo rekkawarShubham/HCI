@@ -1,0 +1,225 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="Form Wizard" ba-panel-class="with-scroll">
+                <ba-wizard>
+
+                    <ba-wizard-step title="Business info" form="vm.businessInfoForm">
+                        <form name="vm.businessInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.businessInfoForm.enterprise_name.$invalid && (vm.businessInfoForm.enterprise_name.$dirty || vm.businessInfoForm.$submitted)}">
+                                        <label for="enterprise_name">Name Of Enterprise</label>
+                                        <input type="text" class="form-control" id="enterprise_name" name="enterprise_name"
+                                            placeholder="Enterprise Name" ng-model="vm.businessInfo.enterprise_name"
+                                            required>
+                                        <span class="help-block error-block basic-block">Name Required</span>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{'has-error': vm.businessInfoForm.constitution.$invalid && (vm.businessInfoForm.constitution.$dirty || vm.businessInfoForm.$submitted)}">
+                                        <label for="constitution">Constitution</label>
+                                        <select class="form-control" title="Select Constitution" id="constitution" name="constitution"
+                                            selectpicker ng-model="vm.businessInfo.constitution" required>
+                                            <option>Proprietary</option>
+                                            <option>Partnership</option>
+                                            <option>Pvt Ltd.</option>
+                                            <option>Others</option>
+                                        </select>
+                                        <span class="help-block error-block basic-block">Constitution Required</span>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.businessInfoForm.email.$invalid && (vm.businessInfoForm.email.$dirty || vm.businessInfoForm.$submitted)}">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                                            placeholder="Email" ng-model="vm.businessInfo.email" required>
+                                        <span class="help-block error-block basic-block">Proper email required</span>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': vm.businessInfoForm.category.$invalid && (vm.businessInfoForm.category.$dirty || vm.businessInfoForm.$submitted)}">
+                                        <label for="category">Social Category</label>
+                                        <select class="form-control" title="Select Category" id="category" name="category"
+                                            selectpicker ng-model="vm.businessInfo.category" required>
+                                            <option>SC</option>
+                                            <option>ST</option>
+                                            <option>OBC</option>
+                                            <option>Minority Community</option>
+                                        </select>
+                                        <span class="help-block error-block basic-block">Category Required</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <center>
+                                        <div class="form-group" ng-class="{'has-error': vm.businessInfoForm.check2.$invalid && (vm.businessInfoForm.check2.$dirty || vm.businessInfoForm.$submitted)}">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" id="check2" name="check2" ng-model="vm.businessInfo.check2"
+                                                    ng-click="register1(vm.businessInfo)" required>
+                                                <span> I hereby certify that the above given information is true and
+                                                    accurate.</span>
+                                                <span class="help-block error-block basic-block">Required</span>
+                                            </label>
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="Personal Info" form="vm.proofInfoForm">
+                        <form name="vm.proofInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.proofInfoForm.id_proof.$invalid && (vm.proofInfoForm.id_proof.$dirty || vm.proofInfoForm.$submitted)}">
+                                        <label for="id_proof">ID Proof</label>
+                                        <input type="text" class="form-control" id="id_proof" name="id_proof"
+                                            placeholder="ID Proof (e.g AADHAR)" ng-model="vm.proofInfo.id_proof"
+                                            required>
+                                        <span class="help-block error-block basic-block">Proof-ID Required</span>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.proofInfoForm.id_proof_doc.$invalid && (vm.proofInfoForm.id_proof_doc.$dirty || vm.proofInfoForm.$submitted)}">
+                                        <label for="id_proof_doc">ID-PROOF DOC</label>
+                                        <div class="form-group">
+                                            <input type="file" ngf-select="addDocumentsToStorage($file, 'id_proof_doc')"
+                                                ng-model="files" accept=".pdf,.jpg,.png,.csv" id="id_proof_doc" name="id_proof_doc"
+                                                ngf-max-height="1000" ngf-max-size="1MB" required />
+                                        </div>
+                                        <span class="help-block error-block basic-block">Proof-ID Document Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.proofInfoForm.address_proof.$invalid && (vm.proofInfoForm.address_proof.$dirty || vm.proofInfoForm.$submitted)}">
+                                        <label for="address_proof">Address Proof</label>
+                                        <input type="text" class="form-control" id="address_proof" name="address_proof"
+                                            placeholder="Address Proof (e.g Passport)" ng-model="vm.proofInfo.address_proof"
+                                            required>
+                                        <span class="help-block error-block basic-block">Address Proof Required</span>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.proofInfoForm.address_proof_doc.$invalid && (vm.proofInfoForm.address_proof_doc.$dirty || vm.proofInfoForm.$submitted)}">
+                                        <label for="address_proof_doc">Address-PROOF DOC</label>
+                                        <div class="form-group">
+                                            <input type="file" ngf-select="addDocumentsToStorage1($file, 'address_proof_doc')"
+                                                ng-model="files" accept=".pdf,.jpg,.png,.csv" id="address_proof_doc"
+                                                name="address_proof_doc" ngf-max-height="1000" ngf-max-size="1MB"
+                                                required />
+                                        </div>
+                                        <span class="help-block error-block basic-block">Address Proof Document
+                                            Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="Bank Questions" form="vm.questionInfoForm">
+                        <form name="vm.questionInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.question1.$invalid && (vm.questionInfoForm.question1.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="question1">Question 1</label>
+                                        <input type="text" class="form-control" id="question1" name="question1"
+                                            ng-model="vm.questionInfo.question1" style="color: black;font-weight: bold"
+                                            readonly>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.ans1.$invalid && (vm.questionInfoForm.ans1.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="ans1">ANSWER</label>
+                                        <textarea type="text" class="texttooltip form-control" rows="4" name="ans1" id="ans1"
+                                            maxlength="1000" placeholder="Give Your Answer." ng-model="vm.questionInfo.ans1"
+                                            required>
+
+
+
+                                           </textarea>
+                                        <span class="help-block error-block basic-block">Answer Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.question2.$invalid && (vm.questionInfoForm.question2.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="question2">Question 2</label>
+                                        <input type="text" class="form-control" id="question2" name="question2"
+                                            ng-model="vm.questionInfo.question2" style="color: black;font-weight: bold"
+                                            readonly>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.ans2.$invalid && (vm.questionInfoForm.ans2.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="ans2">ANSWER</label>
+                                        <textarea type="text" class="texttooltip form-control" rows="4" name="ans2" id="ans2"
+                                            maxlength="1000" placeholder="Give Your Answer." ng-model="vm.questionInfo.ans2"
+                                            required>
+
+
+
+                                                            </textarea>
+                                        <span class="help-block error-block basic-block">Answer Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.question3.$invalid && (vm.questionInfoForm.question3.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="question3">Question 3</label>
+                                        <input type="text" class="form-control" id="question3" name="question3"
+                                            ng-model="vm.questionInfo.question3" style="color: black;font-weight: bold"
+                                            readonly>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.ans3.$invalid && (vm.questionInfoForm.ans3.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="ans3">ANSWER</label>
+                                        <textarea type="text" class="texttooltip form-control" rows="4" name="ans3" id="ans3"
+                                            maxlength="1000" placeholder="Give Your Answer." ng-model="vm.questionInfo.ans3"
+                                            required>
+
+
+
+                                                </textarea>
+                                        <span class="help-block error-block basic-block">Answer Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.question4.$invalid && (vm.questionInfoForm.question4.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="question4">Question 4</label>
+                                        <input type="text" class="form-control" id="question4" name="question4"
+                                            ng-model="vm.questionInfo.question4" style="color: black;font-weight: bold"
+                                            readonly>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.ans4.$invalid && (vm.questionInfoForm.ans4.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="ans4">ANSWER</label>
+                                        <textarea type="text" class="texttooltip form-control" rows="4" name="ans4" id="ans4"
+                                            maxlength="1000" placeholder="Give Your Answer." ng-model="vm.questionInfo.ans4"
+                                            required>
+
+
+
+                                                </textarea>
+                                        <span class="help-block error-block basic-block">Answer Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.question5.$invalid && (vm.questionInfoForm.question5.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="question5">Question 5</label>
+                                        <input type="text" class="form-control" id="question5" name="question5"
+                                            ng-model="vm.questionInfo.question5" style="color: black;font-weight: bold"
+                                            readonly>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.questionInfoForm.ans5.$invalid && (vm.questionInfoForm.ans5.$dirty || vm.questionInfoForm.$submitted)}">
+                                        <label for="ans5">ANSWER</label>
+                                        <textarea type="text" class="texttooltip form-control" rows="4" name="ans5" id="ans5"
+                                            maxlength="1000" placeholder="Give Your Answer." ng-model="vm.questionInfo.ans5"
+                                            required>
+
+                                             </textarea>
+                                        <span class="help-block error-block basic-block">Answer Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <button type="button" class="btn btn-primary" ng-click="storeForm(vm.questionInfo)">SUBMIT</button>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+
+
+                </ba-wizard>
+            </div>
+        </div>
+    </div>
+</div>

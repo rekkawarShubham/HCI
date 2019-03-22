@@ -1,0 +1,287 @@
+<dashboard-pie-chart></dashboard-pie-chart>
+
+<div class="row">
+  <div class="col-lg-6 col-md-12 col-sm-12"
+       ba-panel
+       ba-panel-title="Seat Acquisition"
+       ba-panel-class="medium-panel traffic-panel">
+    <traffic-chart></traffic-chart>
+  </div>
+  <div class="col-lg-6 col-md-12 col-sm-12"
+       ba-panel
+       ba-panel-title="Yearly Bookings"
+       ba-panel-class="medium-panel">
+       <dashboard-line-chart></dashboard-line-chart>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-xlg-8 col-lg-12 col-md-12 col-sm-7 col-xs-12"
+           ba-panel
+           ba-panel-title="Revenue"
+           ba-panel-class="medium-panel">
+        <dashboard-line-chart></dashboard-line-chart>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="row shift-up">
+  <div class="col-xlg-3 col-lg-6 col-md-6 col-xs-12"
+       ba-panel
+       ba-panel-title="To Do List"
+       ba-panel-class="xmedium-panel feed-comply-panel with-scroll todo-panel">
+    <dashboard-todo></dashboard-todo>
+  </div>
+  <div class="col-xlg-6 col-lg-6 col-md-6 col-xs-12"
+       ba-panel
+       ba-panel-title="Calendar"
+       ba-panel-class="xmedium-panel feed-comply-panel with-scroll calendar-panel">
+    <dashboard-calendar></dashboard-calendar>
+  </div>
+</div> -->
+
+<!--<div class="row">
+  <div class="col-lg-4 col-sm-6 col-xs-12">
+    <div ba-panel ba-panel-title="Weather" ba-panel-class="medium-panel with-scroll">
+      <blur-weather forecast="5"></blur-weather>
+    </div>
+  </div>
+</div>-->
+<uib-tabset>
+    <div class="panel panel-info bootstrap-panel">
+        <div class="panel-heading">
+            <center>CAMPUS LOCATIONS</center>
+        </div>
+        <div class="panel-body">
+<div class="row">
+  
+  <div class="col-xlg-6 col-lg-4 col-md-4 col-sm-8 col-xs-8">
+    <div class="row">
+      <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+        <div class="popular-app-img-container">
+          <div class="popular-app-img">
+            <center><img ng-src="{{::( 'app/audi.jpg' | appImage )}}" height="140" width="180" />
+              <span class="logo-text">Auditorium</span>
+              <button class="btn btn-info" ng-click="auditorium()">See Bookings</button>
+          </div>
+          </center>
+        </div>
+        <div class="popular-app-cost row">
+          <div class="col-xs-9">
+            Total Seats : 200
+          </div>
+        </div>
+        <div class="popular-app-info row">
+          <div class="col-xs-4 text-left">
+            <div class="info-label">Seat Booked</div>
+            <div>140</div>
+          </div>
+          <div class="col-xs-4 text-center">
+            <div class="info-label">Remaining Seats</div>
+            <div>60</div>
+          </div>
+          <div class="col-xs-4 text-right">
+            <div class="info-label"></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+      <div class="row">
+        <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+          <div class="popular-app-img-container">
+            <div class="popular-app-img">
+              <center><img ng-src="{{::( 'app/library.jpg' | appImage )}}" height="140" width="180" />
+                <span class="logo-text">Library</span><br>
+                <button class="btn btn-info" ng-click="library()">See Bookings</button>
+            </div>
+            </center>
+          </div>
+          <div class="popular-app-cost row">
+            <div class="col-xs-9">
+              Total Seats : 450
+            </div>
+          </div>
+          <div class="popular-app-info row">
+            <div class="col-xs-4 text-left">
+              <div class="info-label">Seat Booked</div>
+              <div>240</div>
+            </div>
+            <div class="col-xs-4 text-center">
+              <div class="info-label">Remaining Seats</div>
+              <div>210</div>
+            </div>
+            <div class="col-xs-4 text-right">
+              <div class="info-label"></div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+        <div class="row">
+          <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+            <div class="popular-app-img-container">
+              <div class="popular-app-img">
+                <center><img ng-src="{{::( 'app/tutorial.jpg' | appImage )}}" height="140" width="180" />
+                  <span class="logo-text">Function Hall</span>
+                  <button class="btn btn-info" ng-click="tutorial()">See Bookings</button>
+                </div>
+
+            </center>
+            </div>
+            <div class="popular-app-cost row">
+              <div class="col-xs-9">
+                Total Seats : 300
+              </div>
+            </div>
+            <div class="popular-app-info row">
+              <div class="col-xs-4 text-left">
+                <div class="info-label">Seat Booked</div>
+                <div>170</div>
+              </div>
+              <div class="col-xs-4 text-center">
+                <div class="info-label">Remaining Seats</div>
+                <div>130</div>
+              </div>
+              <div class="col-xs-4 text-right">
+                <div class="info-label"></div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+</div>
+<div class="row">
+  
+    <div class="col-xlg-6 col-lg-4 col-md-4 col-sm-8 col-xs-8">
+      <div class="row">
+        <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+          <div class="popular-app-img-container">
+            <div class="popular-app-img">
+              <center><img ng-src="{{::( 'app/it.jpg' | appImage )}}" height="140" width="180" />
+                <span class="logo-text">IT Hall</span><br>
+              <button class="btn btn-info" ng-click="it_hall()">See Bookings</button>
+              </div>
+            </center>
+          </div>
+          <div class="popular-app-cost row">
+            <div class="col-xs-9">
+              Total Seats : 150
+            </div>
+          </div>
+          <div class="popular-app-info row">
+            <div class="col-xs-4 text-left">
+              <div class="info-label">Seat Booked</div>
+              <div>130</div>
+            </div>
+            <div class="col-xs-4 text-center">
+              <div class="info-label">Remaining Seats</div>
+              <div>20</div>
+            </div>
+            <div class="col-xs-4 text-right">
+              <div class="info-label"></div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+        <div class="row">
+          <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+            <div class="popular-app-img-container">
+              <div class="popular-app-img">
+                <center><img ng-src="{{::( 'app/computer.jpg' | appImage )}}" height="140" width="180" />
+                  <span class="logo-text">Computer Hall</span>
+                <button class="btn btn-info" ng-click="computer_hall()">See Bookings</button>
+               
+                </div>
+              </center>
+            </div>
+            <div class="popular-app-cost row">
+              <div class="col-xs-9">
+                Total Seats : 250
+              </div>
+            </div>
+            <div class="popular-app-info row">
+              <div class="col-xs-4 text-left">
+                <div class="info-label">Seat Booked</div>
+                <div>140</div>
+              </div>
+              <div class="col-xs-4 text-center">
+                <div class="info-label">Remaining Seats</div>
+                <div>110</div>
+              </div>
+              <div class="col-xs-4 text-right">
+                <div class="info-label"></div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="col-xlg-6 col-lg-4 col-md-8 col-sm-8 col-xs-8">
+          <div class="row">
+            <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+              <div class="popular-app-img-container">
+                <div class="popular-app-img">
+                  <center><img ng-src="{{::( 'app/reading.jpg' | appImage )}}" height="140" width="180" />
+                    <span class="logo-text">Reading Hall</span>
+                    <button class="btn btn-info" ng-click="reading_hall()">See Bookings</button>
+                  </div>
+                </center>
+              </div>
+              <div class="popular-app-cost row">
+                <div class="col-xs-9">
+                  Total Seats : 400
+                </div>
+              </div>
+              <div class="popular-app-info row">
+                <div class="col-xs-4 text-left">
+                  <div class="info-label">Seat Booked</div>
+                  <div>170</div>
+                </div>
+                <div class="col-xs-4 text-center">
+                  <div class="info-label">Remaining Seats</div>
+                  <div>230</div>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <div class="info-label"></div>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <center><button class="btn btn-info" ng-click="floorplan()">View Flower Plans</button>
+        </center>
+  </div>
+  </div>
+  </div>
+</uib-tabset>
+   <br><br><br>
+      <div class="row">
+        <div class="col-xlg-6 col-lg-6 col-md-6 col-xs-12"
+          ba-panel
+          ba-panel-title="TimeLine Of Bookings"
+          ba-panel-class="xmedium-panel feed-comply-panel with-scroll calendar-panel">
+          <center>    <dashboard-calendar></dashboard-calendar>
+        </center> </div>
+      </div>

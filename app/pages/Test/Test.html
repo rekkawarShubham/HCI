@@ -1,0 +1,29 @@
+
+<uib-tabset>
+  <div class="panel panel-primary bootstrap-panel">
+    <div class="panel-heading">
+      <center>APPLY FOR ADMISSION PROCESS</center>
+    </div>
+    <div class="panel-body">
+      <form name="ApplicationForm" ng-submit="getDetails(mis,password)">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+          <div class="form-group has-primary">
+            <label for="mis">MIS NO</label>
+            <input type="text" class="form-control" name="mis" id="mis" ng-value="{{mis}}" ng-model="mis"
+              placeholder="MIS No" required>
+          </div>
+          <div class="form-group has-primary">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" ng-model="password"
+              placeholder="Password" required>
+          </div>
+          <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</uib-tabset>

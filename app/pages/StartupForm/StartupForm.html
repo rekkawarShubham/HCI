@@ -1,0 +1,297 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="Form Wizard" ba-panel-class="with-scroll">
+                <ba-wizard>
+                    <ba-wizard-step title="Foundation info" form="vm.personalInfoForm">
+                        <form name="vm.personalInfoForm" novalidate>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.personalInfoForm.username.$invalid && (vm.personalInfoForm.username.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="examplestartupname">Registration No</label>
+                                        <input type="text" class="form-control" id="rno" name="rno" placeholder="Registration No."
+                                            ng-model="vm.personalInfo.rno" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.email.$invalid && (vm.personalInfoForm.email.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                                            placeholder="Email" ng-model="vm.personalInfo.email" required>
+                                        <span class="help-block error-block basic-block">Proper email required</span>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.personalInfoForm.mobno.$invalid && (vm.personalInfoForm.mobno.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="mobno">ROC Code</label>
+                                        <input type="text" class="form-control" id="examplestartupname" name="roc"
+                                            placeholder="Roc Code" ng-model="vm.personalInfo.roc" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.link_url.$invalid && (vm.personalInfoForm.link_url.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="link_url">LinkedIn URL</label>
+                                        <input type="url" class="form-control" id="exampleInputEmail1" name="link_url"
+                                            placeholder="LinkedIn URL" ng-model="vm.personalInfo.link_url" required>
+                                        <span class="help-block error-block basic-block">LinkedIn URLrequired</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <center>
+                                        <div class="form-group" ng-class="{'has-error': vm.personalInfoForm.check2.$invalid && (vm.personalInfoForm.check2.$dirty || vm.personalInfoForm.$submitted)}">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" id="check2" name="check2" ng-model="vm.personalInfo.check2"
+                                                    ng-click="register1(vm.personalInfo)" required>
+                                                <span> I hereby certify that the above given information is true and
+                                                    accurate.</span>
+                                                <span class="help-block error-block basic-block">Required</span>
+                                            </label>
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="StartUp Information" form="vm.startupInfoForm">
+                        <form name="vm.startupInfoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.startupInfoForm.startupname.$invalid && (vm.startupInfoForm.startupname.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="exampleUsername2">Startup Name</label>
+                                        <input type="text" class="form-control" id="exampleUsername2" name="startupname"
+                                            placeholder="Startup Name" ng-model="vm.startupInfo.startupname" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': vm.startupInfoForm.stage.$invalid && (vm.startupInfoForm.stage.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="sstage">Stage</label>
+                                        <select class="form-control" title="Select Startup Stage" id="sstage" name="stage"
+                                            selectpicker ng-model="vm.startupInfo.stage" required>
+                                            <option>Ideation</option>
+                                            <option>Proof of Concept</option>
+                                            <option>Beta Launched</option>
+                                            <option>Revenues</option>
+                                            <option>Steady Revenues</option>
+                                        </select>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.startupInfoForm.twitterpitch.$invalid && (vm.startupInfoForm.twitterpitch.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="date">Date Of Incorporation</label>
+                                        <input type="text" class="form-control" name="date" id="date" ng-model="vm.startupInfo.date">
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.startupInfoForm.twitterpitch.$invalid && (vm.startupInfoForm.twitterpitch.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="capital">Authorized Capital</label>
+                                        <input type="text" class="form-control" name="auth_capital" id="auth_capital"
+                                            ng-model="vm.startupInfo.auth_capital">
+
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.startupInfoForm.twitterpitch.$invalid && (vm.startupInfoForm.twitterpitch.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="paid_up">Paid Up Capital(Rs)</label>
+                                        <input type="text" class="form-control" name="paid_up" id="paid_up" ng-model="vm.startupInfo.paid_up">
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.startupInfoForm.different.$invalid && (vm.startupInfoForm.different.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="ddifferent">How are you different</label>
+                                        <textarea type="text" class="texttooltip form-control" rows="4" name="different"
+                                            id="ddifferent" placeholder="Please tell us why your segment is different or how you are addressing the segment differently according to their needs. For example - we are different from A, B, C and D SaaS startups in the Indian Market as we focus only on retail pharmacy chains. OR we are women focussed marketplace that manifests higher retention rate than BigKart. Refrain from feature based comparison."
+                                            ng-model="vm.startupInfo.different">
+                                        </textarea>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="ng-cloak" ng-controller="StartupFormCtrl as selectpickerVm">
+                                        <div class="form-group" ng-class="{'has-error': vm.startupInfoForm.vsector.$invalid && (vm.startupInfoForm.vsector.$dirty || vm.startupInfoForm.$submitted)}">
+                                            <label for="vsector">Vertical Sectors</label>
+                                            <ui-select id="vsector" name="vsector" ng-model="vm.startupInfo.vsector"
+                                                class="btn-group bootstrap-select form-control" ng-disabled="false"
+                                                append-to-body="true" search-enabled="true">
+                                                <ui-select-match placeholder="Select Vertical Sectors">
+                                                    {{$select.selected.label}}
+                                                </ui-select-match>
+                                                <ui-select-choices repeat="groupedItems in selectpickerVm.groupedSelectItems | groupSelectpickerOptions: {label: $select.search}"
+                                                    group-by="'group'">
+                                                    <span ng-bind-html="groupedItems.label | highlight: $select.search"></span>
+                                                </ui-select-choices>
+                                            </ui-select>
+
+                                            <span class="help-block error-block basic-block">Required</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.startupInfoForm.address.$invalid && (vm.startupInfoForm.address.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="ddifferent">Startup Address</label>
+                                        <textarea type="text" class="texttooltip form-control" rows="4" name="address"
+                                            id="address" placeholder="Please tell us why your segment is different or how you are addressing the segment differently according to their needs. For example - we are different from A, B, C and D SaaS startups in the Indian Market as we focus only on retail pharmacy chains. OR we are women focussed marketplace that manifests higher retention rate than BigKart. Refrain from feature based comparison."
+                                            ng-model="vm.startupInfo.address">
+                                        </textarea>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': vm.startupInfoForm.hsector.$invalid && (vm.startupInfoForm.hsector.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="hhsector">Horizontal Sector</label>
+                                        <select class="form-control" title="Select Horizontal Sector" id="hhsector"
+                                            name="hsector" selectpicker ng-model="vm.startupInfo.hsector" required>
+                                            <option>Consulting</option>
+                                            <option>Consumer Internet</option>
+                                            <option>E-Commerce</option>
+                                            <option>Engineering</option>
+                                            <option>Enterprise Mobility</option>
+                                            <option>Location Based Services</option>
+                                            <option>Mobile</option>
+                                            <option>Offline</option>
+                                            <option>Online Aggregator</option>
+                                            <option>Sharing Economy</option>
+
+                                        </select>
+                                        <span class="help-block error-block basic-block">required</span>
+                                    </div>
+
+                                    <div class="form-group" ng-class="{'has-error': vm.startupInfoForm.typeb.$invalid && (vm.startupInfoForm.typeb.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="ttypeb">Type of Business</label>
+                                        <select class="form-control" title="Select Type of Business" id="ttypeb" name="typeb"
+                                            selectpicker ng-model="vm.startupInfo.typeb" required>
+                                            <option>B2B</option>
+                                            <option>B2C</option>
+
+                                        </select>
+                                        <span class="help-block error-block basic-block">required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.startupInfoForm.cplatform.$invalid && (vm.startupInfoForm.cplatform.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="ccplatform">Cloud Platform you use</label>
+                                        <select class="form-control" title="Select Cloud Platform you use" id="ccplatform"
+                                            name="cplatform" selectpicker ng-model="vm.startupInfo.cplatform" required>
+                                            <option>Amazon AWS</option>
+                                            <option>Microsoft Azure</option>
+                                            <option>Google Cloud</option>
+                                            <option>Other</option>
+                                            <option>None</option>
+                                        </select>
+                                        <span class="help-block error-block basic-block">required</span>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': vm.startupInfoForm.fstartup.$invalid && (vm.startupInfoForm.fstartup.$dirty || vm.startupInfoForm.$submitted)}">
+                                        <label for="ffstartup">How did you hear about Financing StartUps</label>
+                                        <select class="form-control" id="ffstartup" name="fstartup" selectpicker
+                                            ng-model="vm.startupInfo.fstartup" required>
+                                            <option>Referral Code</option>
+                                            <option>Referral from Investor</option>
+                                            <option>Referral from StartUp</option>
+                                            <option>News/Media</option>
+                                            <option>Events</option>
+                                            <option>Others</option>
+                                        </select>
+                                        <span class="help-block error-block basic-block">required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <center>
+                                    <div class="form-group" ng-class="{'has-error': vm.startupInfoForm.check3.$invalid && (vm.startupInfoForm.check3.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="check3" name="check3" ng-model="vm.startupInfo.check3"
+                                                ng-click="register2(vm.startupInfo)" required>
+                                            <span> I hereby certify that the above given information is true and
+                                                accurate.</span>
+                                            <span class="help-block error-block basic-block">Required</span>
+                                        </label>
+                                    </div>
+                                </center>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="Funding Information" form="vm.addressForm">
+                        <form name="vm.addressForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback" ng-class="{'has-error': vm.addressForm.raise_amount.$invalid && (vm.addressForm.raise_amount.$dirty || vm.addressForm.$submitted)}">
+                                        <label for="raise_amount">What is the amount you want to raise?</label>
+                                        <input type="text" class="form-control" id="raise_amount" name="raise_amount" placeholder="Raised Amount"
+                                            ng-model="vm.shipment.raise_amount" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="productName">What do you expect from Finnacing Platform?</label>
+                                        <select class="form-control" title="Category" name="expectation" ng-model="vm.shipment.expectation"
+                                            selectpicker>
+                                            <option selected>I have a lead investor,I want to close the round</option>
+                                            <option>I have some commitment,I want to close the round</option>
+                                            <option>I don't have any investment commitments from my startup</option>
+                                            <option>I want to fundraise and don't know what to do</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.shipment.password.$invalid && (vm.shipment.password.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                                            placeholder="Password" ng-model="vm.shipment.password" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'has-error': !vm.arePersonalInfoPasswordsEqual() && (vm.personalInfoForm.confirmPassword.$dirty || vm.personalInfoForm.$submitted)}">
+                                        <label for="exampleInputConfirmPassword1">Confirm Password</label>
+                                        <input type="password" class="form-control" id="exampleInputConfirmPassword1"
+                                            name="confirmPassword" placeholder="Confirm Password" ng-model="vm.shipment.confirmPassword"
+                                            required>
+                                        <span class="help-block error-block basic-block">Passwords should match</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <center>
+                                    <div class="form-group" ng-class="{'has-error': vm.shipment.check2.$invalid && (vm.shipment.check2.$dirty || vm.shipmentInfoForm.$submitted)}">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="check3" name="check3" ng-model="vm.shipmentInfo.check2"
+                                                ng-click="register3(vm.shipment)" required>
+                                            <span> I hereby certify that the above given Funding information is true
+                                                and
+                                                accurate.</span>
+                                            <span class="help-block error-block basic-block">Required</span>
+                                        </label>
+                                    </div>
+                                </center>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                    <ba-wizard-step title="Verfication" info form="vm.verificationForm">
+                        <form name="vm.verificationForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-3">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group" ng-class="{'has-error': vm.verificationForm.email.$invalid && (vm.verificationForm.email.$dirty || vm.verificationForm.$submitted)}">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" name="email"
+                                            placeholder="Email" ng-model="vm.verification.email" required>
+                                        <span class="help-block error-block basic-block">Proper email required</span>
+                                    </div>
+                                    <div class="form-group" ng-class="{'has-error': vm.verificationForm.otp.$invalid && (vm.verificationForm.otp.$dirty || vm.verificationForm.$submitted)}">
+                                        <label for="otp">Enter OTP </label>
+                                        <input type="otp" class="form-control" id="otp" name="otp" placeholder="otp"
+                                            ng-model="vm.verification.otp" required>
+                                        <span class="help-block error-block basic-block">OTP Required</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                </div>
+                                <button type="button" class="btn btn-primary" ng-click="generateOtp(vm.verification.email)">Generate
+                                    OTP</button>
+                                <button type="button" class="btn btn-success" ng-click="verify(vm.verification.otp)">Verify</button>
+                            </div>
+                        </form>
+                    </ba-wizard-step>
+                </ba-wizard>
+            </div>
+        </div>
+    </div>
+</div>

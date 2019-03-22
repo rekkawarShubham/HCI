@@ -1,0 +1,209 @@
+<div ba-panel ba-panel-class="profile-page">
+  <div class="panel-content">
+    <div class="progress-info">Your profile is 90% Complete</div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" aria-valuenow="70"
+        aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+      </div>
+    </div>
+
+    <h3 class="with-line">General Information</h3>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <div class="col-sm-9">
+            <div class="userpic">
+              <div class="userpic-wrapper">
+                <img ng-src="{{ picture }}" ng-click="uploadPicture()">
+              </div>
+              <i class="ion-ios-close-outline" ng-click="removePicture()" ng-if="!noPicture"></i>
+              <a href class="change-userpic" ng-click="uploadPicture()">Change Profile Picture</a>
+              <input type="file" ng-show="false" id="uploadFile" ng-file-select="onFileSelect($files)">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+
+    <div class="row">
+      <!-- <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputFirstName" class="col-sm-3 control-label">First Name</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputFirstName" placeholder="">
+          </div>
+        </div>
+        <div class="form-group row clearfix">
+          <label for="inputLastName" class="col-sm-3 control-label">Last Name</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputLastName" placeholder="" >
+          </div>
+        </div>
+      </div> -->
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Startup Name :</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="startup_name" placeholder="My Startup" ng-model="startup_name"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+        <div class="form-group row clearfix">
+          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Stage :</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="stage" placeholder="Startup Stage" ng-model="stage" readonly
+              style="color: black;font-weight: bold">
+          </div>
+        </div>
+
+        <div class="form-group row clearfix">
+          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Vertical Sector :</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="vsector" placeholder="Vertical Sector" ng-model="vsector" readonly
+              style="color: black;font-weight: bold">
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="form-group row clearfix">
+          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">CIN No :</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="cin" placeholder="CIN no" ng-model="cin" readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+        <div class="form-group row clearfix">
+          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Date :</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="date" placeholder="Date of Incorporation" ng-model="date"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+        <div class="form-group row clearfix">
+            <label class="col-sm-3 control-label" style="color: black;font-weight: bold">H - Sector :</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="hsector" placeholder="Horizontal Sector" ng-model="hsector" readonly style="color: black;font-weight: bold">
+            </div>
+          </div>
+      </div>
+
+    </div>
+
+    <h3 class="with-line">Other Information</h3>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputinterest1" class="col-sm-3 control-label" style="color: black;font-weight: bold">Real Capital:</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="auth_capital" placeholder="" ng-model="auth_capital"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+
+          <label for="inputinterest2" class="col-sm-3 control-label" style="color: black;font-weight: bold">Paid UP :</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="paid_up" placeholder="" ng-model="paid_up"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputinterest1" class="col-sm-3 control-label" style="color: black;font-weight: bold">Business Type:</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="b_type" placeholder="" ng-model="b_type"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+
+          <label for="inputinterest2" class="col-sm-3 control-label" style="color: black;font-weight: bold">Registration No:</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="rno" placeholder="" ng-model="rno"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputinterest5" class="col-sm-3 control-label" style="color: black;font-weight: bold">Cloud Platform:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="cplatform" placeholder="" ng-model="cplatform"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputinterest6" class="col-sm-3 control-label" style="color: black;font-weight: bold">ROC Code:</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="roc_code" placeholder="" ng-model="roc_code"
+              readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="with-line">Contact Information</h3>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group row clearfix">
+          <label for="inputEmail3" class="col-sm-3 control-label" style="color: black;font-weight: bold">Email</label>
+
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="email" placeholder="" ng-model="email" readonly style="color: black;font-weight: bold">
+          </div>
+        </div>
+        <div class="form-group row clearfix">
+          <label for="inputPhone" class="col-sm-3 control-label" style="color: black;font-weight: bold">Phone</label>
+
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="phone" placeholder="" value="(+91) 22 9988 2222" style="color: black;font-weight: bold">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="with-line">Social Profiles</h3>
+
+    <div class="social-profiles row clearfix">
+      <div class="col-md-3 col-sm-4" ng-repeat="item in socialProfiles">
+
+        <a class="sn-link" href ng-click="showModal(item)" ng-if="!item.href">
+          <i class="socicon {{ item.icon }}"></i>
+          <span>{{ item.name }}</span>
+        </a>
+
+        <a class="sn-link connected" href="{{ item.href }}" target="_blank" ng-if="item.href">
+          <i class="socicon {{ item.icon }}"></i>
+          <span>{{ item.name }}</span>
+          <em class="ion-ios-close-empty sn-link-close" ng-mousedown="unconnect(item)"></em>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

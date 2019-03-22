@@ -1,0 +1,50 @@
+<div class="col-md-3"></div>
+<div class="col-md-5">
+    <div class="panel panel-info bootstrap-panel">
+        <div class="panel-heading">
+            <center>INVESTOR LOGIN</center>
+        </div>
+        <div class="panel-body">
+            <form name="ApplicationForm" ng-submit="getDetails(insert.email,insert.password,insert.startup1)">
+                <div class="form-group">
+                    <label for="startup1">Type of Investor</label>
+                    <div class="row">
+                        <div class="form-group">
+                            <select class="form-control selectpicker" title="Select Investor" name="startup1" id="startup1"
+                                ng-model="insert.startup1" selectpicker>
+                                <option>Aspire</option>
+                                <option>Fund of Funds</option>
+                                <option>India Aspiration Funds</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="email">SEBI_regno</label>
+                    <input type="mail" class="form-control" name="email" id="email" ng-model="insert.email" placeholder="SEBI_regno "
+                        required>
+                </div>
+                <div class="row">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" ng-model="insert.password"
+                        placeholder="Password" required>
+                </div>
+                <div class="row">
+                    <center>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-12 col-lg-4">
+                            <br><br><br>
+                            <button class="btn btn-info" ng-click="register()">REGISTER</button>
+                        </div>
+                        <div class="col-md-12 col-lg-4">
+                            <br><br><br>
+                            <button type="submit" class="btn btn-info" name="insert">LOGIN</button>
+                        </div>
+                    </center>
+                </div>
+        </div>
+        </form>
+    </div>
+</div>
+</div>

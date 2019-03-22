@@ -1,0 +1,112 @@
+<div class="panel panel-info bootstrap-panel">
+    <div class="panel-heading">
+        <center> SELECT YOUR ROLE</center>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-xlg-4 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-8 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+                        <div class="popular-app-img-container">
+                            <div class="popular-app-img">
+                                <center><img ng-src="{{::( 'app/startup.jpg' | appImage )}}" height="100%" width="100%" />
+                            </div>
+                            </center>
+                        </div>
+                        <center><br><br>
+                            <button class="btn btn-info" ng-click="s_role()">I am Startup</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xlg-4 col-lg-4 col-md-4 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel ba-panel-class="popular-app medium-panel">
+                        <div class="popular-app-img-container">
+                            <div class="popular-app-img">
+                                <center><img ng-src="{{::( 'app/investor.jpg' | appImage )}}" height="100%" width="100%" />
+                            </div>
+                            </center>
+                        </div>
+                        <center><br><br>
+                            <button class="btn btn-info" ng-click="i_role()">I am Investor</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-4">
+                <div class="col-md-4"></div>
+                <div class="row">
+                    <div class="form-group">
+                        <select class="form-control selectpicker" title="Select Year" selectpicker ng-model="selectedYear"
+                            required>
+                            <option>FY</option>
+                            <option>SY</option>
+                            <option>TY</option>
+                            <option>BTech</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control selectpicker" title="Select Gender" selectpicker ng-model="selectedGender"
+                            ng-change="loaddataforstudent()" required>
+                            <option>boys</option>
+                            <option>girls</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+        <div class="row">
+            <div class="col-md-7" ng-controller="LandingPageCtrl">
+                <div ba-panel ba-panel-title="USAGE OF FUNDS" ba-panel-class="with-scroll ">
+                    <div class="chartjs-canvas-holder-first-row">
+                        <canvas id="pie" class="chart chart-pie" chart-options="options" chart-data="data" chart-labels="labels"
+                            chart-click="changeData">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5" ba-panel ba-panel-title="SELECT SECTOR" ba-panel-class="with-scroll">
+                <div class="modal-buttons same-width clearfix">
+                    <button type="button" class="btn btn-success" ng-click="loaddata($event)">Automobile</button>
+                    <button type="button" class="btn btn-info" ng-click="loaddata($event)">Aviation</button>
+                    <button type="button" class="btn btn-warning" ng-click="loaddata($event)">Chemicals</button>
+                    <button type="button" class="btn btn-danger" ng-click="loaddata($event)">Defence Manufacture</button>
+                    <button type="button" class="btn btn-info" ng-click="loaddata($event)">Construction</button>
+                    <button type="button" class="btn btn-success" ng-click="loaddata($event)">Capital Goods</button>
+                    <button type="button" class="btn btn-danger" ng-click="loaddata($event)">Food Processing</button>
+                    <button type="button" class="btn btn-warning" ng-click="loaddata($event)">Healthcare</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- <div class="w3-container">
+ 
+        <div class="card">
+                <div class="w3-card-4 w3-dark-grey" >
+                <center><h3>STARTUP</h3></center>
+          <img ng-src="{{::('app/investor.png' | appImage)}}" alt="Avatar" style="width:100%">
+        </div>
+                      <div class="container">
+            <div class="w3-section">
+                    <button class="btn btn-info" ng-click="sign_in()">SIGN IN</button>
+                    <button class="btn btn-info" ng-click="sign_up()">SIGN UP</button>
+                  </div>
+          </div>
+        
+        </div>
+    </div> -->

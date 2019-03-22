@@ -1,0 +1,38 @@
+<uib-accordion-group heading="" panel-class="panel-primary bootstrap-panel accordion-panel">
+</uib-accordion-group>
+<div class="col-md-4">
+        <div class="col-md-4"></div>
+    <div class="row">
+        <div class="form-group">
+            <select class="form-control selectpicker" title="Select Year" selectpicker ng-model="selectedYear" required>
+                <option>FY</option>
+                <option>SY</option>
+                <option>TY</option>
+                <option>BTech</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control selectpicker" title="Select Gender" selectpicker ng-model="selectedGender"
+                ng-change="loaddataforstudent()" required>
+                <option>boys</option>
+                <option>girls</option>
+
+            </select>
+        </div>
+    </div>
+</div>
+
+
+   
+
+    <div class="row">
+        <div class="col-md-4" ng-controller="StudentStatisticsPageCtrl">
+            <div ba-panel ba-panel-title="INTAKE" ba-panel-class="with-scroll ">
+                <div class="chartjs-canvas-holder-first-row">
+                    <canvas id="pie" class="chart chart-pie" chart-options="options" chart-data="data" chart-labels="labels"
+                        chart-click="changeData">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>

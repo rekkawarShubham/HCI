@@ -1,0 +1,44 @@
+<div class="horizontal-scroll">
+  <div class="form-group select-page-size-wrap ">
+    <label>Rows on page
+      <select class="form-control selectpicker show-tick" title="Rows on page" selectpicker ng-model="smartTablePageSize"
+        ng-options="i for i in [5,10,15,20,25]">
+      </select>
+    </label>
+  </div>
+  <table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+    <thead>
+      <tr class="sortable ">
+        <th class="table-id" st-sort="roomno">Room No</th>
+        <th st-sort="member1">Member 1</th>
+        <th st-sort="member2">Member 2</th>
+        <th st-sort="member3">Member 3</th>
+        <th st-sort="member4">Member 4</th>
+      </tr>
+      <tr>
+        <th><input st-search="roomno" placeholder="Search roomno" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member1" placeholder="Search member1" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member2" placeholder="Search member2" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member3" placeholder="Search member3" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member4" placeholder="Search member4" class="input-sm form-control search-input" type="search" /></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr ng-repeat="item in smartTableData">
+        <td class="table-id">{{item.roomno}}</td>
+        <td>{{item.member1}}</td>
+        <td>{{item.member2}}</td>
+        <td>{{item.member3}}</td>
+        <td>{{item.member4}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6" class="text-center">
+          <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

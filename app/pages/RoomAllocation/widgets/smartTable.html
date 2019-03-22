@@ -1,0 +1,56 @@
+<div class="horizontal-scroll">
+  <div class="form-group select-page-size-wrap ">
+    <label>Rows on page
+      <select class="form-control selectpicker show-tick" title="Rows on page" selectpicker ng-model="smartTablePageSize"
+        ng-options="i for i in [5,10,15,20,25]">
+      </select>
+    </label>
+  </div>
+  <table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+    <thead>
+      <tr class="sortable ">
+        <th class="table-id" st-sort="groupname">Group Name</th>
+        <th st-sort="member1">Member 1</th>
+        <th st-sort="member2">Member 2</th>
+        <th st-sort="member3">Member 3</th>
+        <th st-sort="member4">Member 4</th>
+        <th st-sort="maxcgpa" st-sort-default="reverse" st-skip-natural="true">MAX CGPA</th>
+        <th>Requested Room No</th>
+        <th>Action</th>
+
+      </tr>
+      <tr>
+        <th><input st-search="groupname" placeholder="Search Groupname" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member1" placeholder="Search member1" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member2" placeholder="Search member2" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member3" placeholder="Search member3" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="member4" placeholder="Search member4" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="maxcgpa" placeholder="Search member4" class="input-sm form-control search-input" type="search" /></th>
+        <th><input st-search="roomno" placeholder="Search member4" class="input-sm form-control search-input" type="search" /></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr ng-repeat="item in smartTableData">
+        <td class="table-id">{{item.groupname}}</td>
+        <td>{{item.member1}}</td>
+        <td>{{item.member2}}</td>
+        <td>{{item.member3}}</td>
+        <td>{{item.member4}}</td>
+        <td>{{item.maxcgpa}}</td>
+        <td><input type="text" ng-model="item.roomno" ng-value="{{item.roomno}}"></td>
+        <td>
+          <button class="btn btn-danger editable-table-button btn-xs" ng-click="showModal(item)">Save Room</button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6" class="text-center">
+          <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5"></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

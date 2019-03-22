@@ -1,0 +1,141 @@
+<uib-tabset active="$tabSetStatus.activeTab">
+    <uib-tab heading="START">
+        <div class="panel panel-primary bootstrap-panel">
+            <div class="panel-heading">
+                <center>
+                    <h4><b>Payment Procedure</b> COLLEGE OF ENGINEERING, PUNE</h4>
+                </center>
+            </div>
+            <div class="panel-body">
+                <div class="kameleon-icon-tabs kameleon-icon with-round-bg primary"><img ng-src="{{::( 'Key' | kameleonImg )}}"></div>
+                <pre>
+         <center>
+               <h5> 
+    <b>PROCEDURE TO PAY ONLINE FEE THROUGH SBI I - Collect</b>
+    LOGIN TO : www.google.com
+    Enter : SBI Online
+    Click on : Welcome to Online "SBI i-Collect"
+    Click on : State Bank Collect.
+    Click on : State Bank Collect.
+    Click on : I have read and accepted the terms and conditions stated above.
+    (Click Check Box to proceed for payment.)   </center>
+                            <h5>  <b>             
+                                        1] Select State and Type of Corporate / Institution : 
+                                            State of Corporate/Institution* (from Drop Down Options -Select) – Maharashtra.
+                                            Type of Corporate/Institution * (from Drop Down Options - Select) – Educational Institutions Click on (Go)<br>
+                                        2] Select from Educational Institutions *: Educational Institutions Name (from Drop Down Options - Select)
+                                            –College of Engineering, Pune Click on(Submit).<br>
+                                        3] Provide details of payment *: Select Payment Category * (from Drop Down Options) – Select Correct Payment
+                                            Category.</b>  </h5>
+             </h5>
+        </pre>
+            </div>
+        </div>
+    </uib-tab>
+    <uib-tab heading="INSTRUCTION">
+        <div class="kameleon-icon-tabs kameleon-icon with-round-bg primary"><img ng-src="{{::( 'Checklist' | kameleonImg )}}"></div>
+        <div class="panel panel-primary bootstrap-panel">
+            <div class="panel-heading">
+                <center><b>INSTRUCTIONS TO ALL STUDENTS</b></center>
+            </div>
+            <div class="panel-body">
+                <form>
+
+                    <pre><h5>
+            <b>            1. All students are requested to pay the College Fee through “SBI i-collect facility” only.
+                                EXCEPT -
+
+                                        a] Students availing bank loan from banks, can pay their College Fee
+                                        through Demand Draft favouring “Director,College of Engineering, Pune” and submit at Account
+                                        Department.
+                                    
+                                        b] NRI/FN/PIO students have to pay US$ in the form of Demand Draft only.
+                                
+                        2. All students are requested to select correct fee category from drop down options. Don’t select wrong
+                            fee category, it will trouble both of us. Be careful before selecting the fee category.If you have any
+                            doubt, do contact to account department.
+                    
+                        3. All students are instructed to keep the College Fee Receipts and Hostel Fee Receipts with them till
+                            they graduate. The same should be produced on demand by College authorities without any excuses. 
+                            Also note that your Caution Money Deposit & Hostel Deposit will be refunded only on submission of “ORIGINAL COPY” of Fee Receipt.
+                            Do not submit the same to anybody for any reason.
+                    
+                        4. The above Fee Structure does not include Hostel Fees. Hostel Fees will have to be paid separately by
+                            those who get hostel accommodation.
+                        
+                        5. All category students are requested to comply scholarship / freeship formalities immediately on
+                            receipt of notice / e-mails / Circulars & fill up the online forms. All students sh ould read notices sent through college
+                            e-mail id, website and on notice board from time to time. Do not submit any document to accounts
+                            department without acknowledgement including scholarship forms.
+                            
+                        6. All category students who have paid fees as per categor y during their F.Y., S.Y., T.Y. & B.Tech but
+                            did not submit the Scholarship / Freeship Forms for whatever reason, are instructed to pay the remaining fees i.e.
+                            Difference of Open Category Fee and Category Fee.
+                        
+                        7. All year down B. Tech Students who have pa id their four year fee in full & M. Tech Students who
+                            have paid their two years fees in full, will be eligible for Semester Pattern Fee. 
+                            They are instructed to pay the semester wise fee with prior approval from Exam Cell and Account Section.
+                        </b>    </h5>     </pre>
+                    <uib-accordion>
+                        <uib-accordion-group heading="CLICK HERE TO VIEW IMPORTANT INSTRUCTION" panel-class="panel-danger bootstrap-panel accordion-panel">
+                            <b>Please Upload Payment Receipt and Transaction ID of your Successfull payment through
+                                this
+                                Portal.
+                            </b>
+                        </uib-accordion-group>
+                    </uib-accordion>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" required>
+                                <span> I Read IMPORTANT Instruction.</span>
+                            </label>
+                        </div>
+                        <center><button class="btn btn-primary" ng-click="Open()">PROCEED</button></center>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </uib-tab>
+
+    <uib-tab heading="PAYMENT">
+        <p>
+            <center><button progress-button="progressFunction()" class="btn btn-primary" ng-click="OpenSBI()">SBI
+                    i-COLLECT</button></center>
+        </p>
+    </uib-tab>
+    <uib-tab heading="UPLOAD">
+        <div class="panel panel-primary bootstrap-panel">
+            <div class="panel-heading">
+                <center>ENTER PAYMENT DETAILS</center>
+            </div>
+            <div class="panel-body">
+                <form name="Approveform">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <label for="mis">MIS NO</label>
+                        <div class="form-group  has-primary">
+                            <input type="number" class="form-control" name="mis" id="mis" ng-model="mis" placeholder="MIS No"
+                                required>
+                        </div>
+                        <label for="tid">Transaction ID:</label>
+                        <div class="form-group has-primary">
+                            <input type="number" class="form-control" name="tid" id="tid" ng-model="tid" placeholder="Enter Payment Transaction ID"
+                                required>
+                        </div>
+                        <label for="payment">Payment Receipt</label>
+                        <div class="form-group has-primary">
+                            <input type="file" ngf-select="storePaymentDetails( $file, 'hostelpayment')" ng-model="files"
+                                accept=".pdf,.jpg,.png,.csv" ngf-max-height="1000" ngf-max-size="1MB" />
+                        </div>
+                        <center><button type="submit" name="insert" class="btn btn-primary">Submit</button></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </uib-tab>
+</uib-tabset>

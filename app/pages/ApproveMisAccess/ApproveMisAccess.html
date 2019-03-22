@@ -1,0 +1,21 @@
+<form name="Approveform" ng-submit="getDetails(insert.mis,insert.password,insert.cpassword)">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="mis">MIS NO</label>
+            <input type="number" class="form-control" name="mis" id="mis" ng-model="insert.mis" placeholder="MIS No"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password" ng-model="insert.password"
+                placeholder="Password" required>
+        </div>
+        <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" class="form-control" name="cpassword" id="cpassword" ng-model="insert.cpassword"
+                placeholder="Confirm Password" required>
+        </div>
+        <center><button progress-button="progressFunction()" type="submit" pb-style="flip-open" name="insert" class="btn btn-info">Submit</button></center>
+    </div>
+</form>

@@ -1,0 +1,80 @@
+<div class="col-md-2"></div>
+<div class="col-md-6">
+    <div class="panel panel-warning bootstrap-panel">
+        <div class="panel-heading">
+            <center><code>Bank</code>SCHEMES</center>
+        </div>
+        <div class="panel-body">
+            <form name="ApplicationForm" ng-submit="getDetails(insert.bank_name,insert.scheme,insert.question1,insert.question2,insert.question3,insert.question4,insert.question5)">
+                <div class="form-group has-success">
+
+                    <div class="row">
+                        <label for="bank_name">Bank Name</label>
+                        <input type="text" class="form-control" name="bank_name" id="bank_name" ng-model="insert.bank_name"
+                            placeholder="Enter Bank Name" required>
+                    </div>
+                    <div class="row">
+                        <div class="form-group" ng-class="{'has-error': ApplicationForm.scheme.$invalid && (ApplicationForm.scheme.$dirty || ApplicationForm.$submitted)}">
+                            <label for="scheme"><b>Select Scheme</b></label>
+                            <select class="form-control" title="Schemes" id="scheme" name="scheme" selectpicker
+                                ng-model="insert.scheme" required>
+                                <option value="1">Atal Tinkering Laboratories</option>
+                                <option value="2">Atal Incubation Centres (AIC)</option>
+                                <option value="3">Biotechnology Industry Partnership Programme (BIPP)</option>
+                                <option value="4">Industry Innovation Programme on Medical Electronics (IIPME)</option>
+                                <option value="5">SPARSH (Social Innovation programme for Products: Affordable &
+                                    Relevant to Societal Health)</option>
+                                <option value="6">Biotechnology Ignition Grant (BIG)</option>
+                                <option value="7">Pradhan Mantri Mudra Yojana (PMMY)</option>
+                                <option value="8">MSME Market Development Assistance</option>
+                                <option value="9">Stand Up India</option>
+                                <option value="10">Startup assistance Scheme</option>
+                            </select>
+                            <span class="help-block error-block basic-block">Required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="question1">Enter Open Ended Question 1.</label>
+                        <textarea type="text" class="texttooltip form-control" rows="2" name="question1" id="question1"
+                            placeholder="Enter Question 1" ng-model="insert.question1">
+                            </textarea>
+                    </div>
+                    <div class="row">
+                        <label for="question2">Enter Open Ended Question 2.</label>
+                        <textarea type="text" class="texttooltip form-control" rows="2" name="question2" id="question2"
+                            placeholder="Enter Question 2" ng-model="insert.question2">
+                            </textarea>
+                    </div>
+                    <div class="row">
+                        <label for="question3">Enter Open Ended Question 3.</label>
+                        <textarea type="text" class="texttooltip form-control" rows="2" name="question3" id="question3"
+                            placeholder="Enter Question 3" ng-model="insert.question3">
+                            </textarea>
+                    </div>
+                    <div class="row">
+                        <label for="question4">Enter Open Ended Question 4.</label>
+                        <textarea type="text" class="texttooltip form-control" rows="2" name="question1" id="question1"
+                            placeholder="Enter Question 4" ng-model="insert.question4">
+                            </textarea>
+                    </div>
+                    <div class="row">
+                        <label for="question5">Enter Open Ended Question 5.</label>
+                        <textarea type="text" class="texttooltip form-control" rows="2" name="question5" id="question5"
+                            placeholder="Enter Question 5" ng-model="insert.question5">
+                            </textarea>
+                    </div>
+
+                    <div class="row">
+                        <center>
+                            <div class="col-md-4"></div>
+                            <div class="col-md-12 col-lg-4">
+                                <br><br><br>
+                                <button type="submit" class="btn btn-warning" name="insert">SUBMIT</button>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
