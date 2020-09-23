@@ -1,46 +1,54 @@
-<div class="col-md-3"></div>
-<div class="col-md-5">
+<div class="col-md-2"></div>
+<div class="col-md-8">
     <div class="panel panel-info bootstrap-panel">
         <div class="panel-heading">
-            <center>INVESTOR LOGIN</center>
+            <center>STUDENT LOGIN</center>
         </div>
         <div class="panel-body">
-            <form name="ApplicationForm" ng-submit="getDetails(insert.email,insert.password,insert.startup1)">
+            <form name="ApplicationForm" ng-submit="getDetails(insert.roll,insert.password,insert.year,insert.division)">
                 <div class="form-group">
-                    <label for="startup1">Type of Investor</label>
                     <div class="row">
-                        <div class="form-group">
-                            <select class="form-control selectpicker" title="Select Investor" name="startup1" id="startup1"
-                                ng-model="insert.startup1" selectpicker>
-                                <option>Aspire</option>
-                                <option>Fund of Funds</option>
-                                <option>India Aspiration Funds</option>
-                            </select>
-                        </div>
+                        <div class="col-md-6">
+                        <label for="Year">Select Year</label>
+                        <select class="form-control selectpicker" title="Select Year" name="year" id="year" ng-model="insert.year"
+                            selectpicker required>
+                            <option>FE</option>
+                            <option>SE</option>
+                            <option>TE</option>
+                            <option>BE</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                            <label for="select_division">Select Division </label>
+                            <select class="form-control selectpicker" title="Select Division" name="division" id="division" ng-model="insert.division"
+                            selectpicker required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
                     </div>
                 </div>
-
                 <div class="row">
-                    <label for="email">SEBI_regno</label>
-                    <input type="mail" class="form-control" name="email" id="email" ng-model="insert.email" placeholder="SEBI_regno "
-                        required>
+                    <label for="roll">Roll No.</label>
+                    <input type="roll" class="form-control" name="roll" id="roll" ng-model="insert.roll" required>
                 </div>
                 <div class="row">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" name="password" id="password" ng-model="insert.password"
-                        placeholder="Password" required>
+                         required>
                 </div>
                 <div class="row">
                     <center>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-12 col-lg-4">
-                            <br><br><br>
-                            <button class="btn btn-info" ng-click="register()">REGISTER</button>
-                        </div>
-                        <div class="col-md-12 col-lg-4">
-                            <br><br><br>
-                            <button type="submit" class="btn btn-info" name="insert">LOGIN</button>
-                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-info" name="insert">LOGIN</button>
                     </center>
                 </div>
         </div>

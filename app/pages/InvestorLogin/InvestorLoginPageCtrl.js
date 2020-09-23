@@ -9,43 +9,29 @@
         document.cookie = "cin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         document.cookie = "pass=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
-        var typeofinvestor;
-        $scope.register = function () {
-            toastr.success("hello");
-            window.location.href = '#/RegisterInvestor'
-        }
-        $scope.getDetails = function (sebi, pass, type) {
-
-
-
-            if (type === "Fund of Funds") {
-                typeofinvestor = "ffs";
-
-            }
-            else if (type === "Aspire") {
-                typeofinvestor = "aspire";
-            }
-            else {
-                typeofinvestor = "india_aspiration_fund"
-            }
-
+        var year;
+        $scope.getDetails = function (roll, pass, year , division) {            
+            console.log(roll,pass,year,division)
+            var year_div = year+division;
             var d = new Date();
             d.setTime(d.getTime() + (1000 * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
             document.cookie = "type" + "=" + "2" + ";" + expires + ";path=/";
-            document.cookie = "cin" + "=" + sebi + ";" + expires + ";path=/";
+            document.cookie = "cin" + "=" + roll + ";" + expires + ";path=/";
             document.cookie = "pass" + "=" + pass + ";" + expires + ";path=/";
-            document.cookie = "typeofinvestor" + "=" + typeofinvestor + ";" + expires + ";path=/";
-
+            document.cookie = "roll" + "=" + roll + ";" + expires + ";path=/";
+            document.cookie = "year" + "=" + year + ";" + expires + ";path=/";
+            document.cookie = "yeardiv" + "=" + year_div + ";" + expires + ";path=/";
 
             $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
             $http({
                 method: 'post',
-                url: 'http://192.168.1.106:8010/api/investor_login_details',
+                url: 'http://127.0.0.1:8010/api/student_login_details',
                 data: {
-                    email: sebi,
+                    roll: roll,
                     password: pass,
-                    typeinvestor: typeofinvestor
+                    year : year,
+                    year_div : year_div
                 }
             })
                 .then(function successCallback(response) {
@@ -53,8 +39,7 @@
                     if (response.data.result == 200) {
                         console.log("Login SuccessFull");
                         toastr.success("Login SuccessFull");
-                        toastr.success(response.data.mobno)
-                        window.location.href = "#/investorprofile?email=" + sebi + "&password=" + pass + "&typeofinvestor=" + typeofinvestor;
+                        window.location.href = "#/investorprofile";
                         location.reload();
                     }
                     else if (response.data.result == 404) {

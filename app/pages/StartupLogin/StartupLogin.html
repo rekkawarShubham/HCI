@@ -4,19 +4,30 @@
         </div>
         <div class="panel-body">
             <div class="row">
-                <div class="col-md-2"></div>
+                <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <div class="panel panel-warning bootstrap-panel">
                         <div class="panel-heading">
-                            <center>LOGIN</center>
+                            <center>ADMIN LOGIN</center>
                         </div>
                         <div class="panel-body">
-                            <form name="ApplicationForm" ng-submit="getDetails(insert.cino,insert.password)">
+                            <form name="ApplicationForm" ng-submit="getDetails(insert.admin_id,insert.password,insert.dept)">
                                 <div class="form-group">
                                     <div class="row">
-                                        <label for="cin">CIN Number</label>
-                                        <input type="text" class="form-control" name="cino" id="cino" ng-model="insert.cino"
-                                            placeholder="Enter CIN Number" required>
+                                        <div class="form-group">
+                                            <select class="form-control selectpicker" title="Select Department" name="dept"
+                                                id="dept" ng-model="insert.dept" selectpicker>
+                                                <option>Computer</option>
+                                                <option>IT</option>
+                                                <option>E&TC</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label for="admin_id">Admin ID</label>
+                                        <input type="text" class="form-control" name="admin_id" id="admin_id" ng-model="insert.admin_id"
+                                            placeholder="Enter ID" required>
                                     </div>
                                     <div class="row">
                                         <label for="pass">Password</label>
@@ -37,51 +48,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
-                <div class="col-md-4">
-                    <div class="panel panel-warning bootstrap-panel">
-                        <div class="panel-heading">
-                            <center>REGISTER STARTUP</center>
-                        </div>
-                        <div class="panel-body">
-                            <form name="ApplicationForm" ng-submit="storeDetails(insert.cin)">
-                                <div class="form-group">
-                                    <div class="row">
-                                        <label for="cin">CIN Number</label>
-                                        <input type="text" class="form-control" name="cin" id="cin" ng-model="insert.cin"
-                                            placeholder="Enter CIN Number" required>
-                                    </div>
-                                    <div class="row">
-                                        <center>
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-12 col-lg-4">
-                                                <br><br><br>
-                                                <button type="submit" class="btn btn-info" name="insert">REGISTER</button>
-                                            </div>
-                                        </center>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <center>
-                    <div class="col-md-2"></div>
-                    <div class="panel panel-warning contextual-example-panel bootstrap-panel">
-                        <div class="panel-heading">Don't have <code>CIN number</code> ?.</div>
-                        <div class="panel-body">
-                            Startup India Scheme is an initiative of the Indian government, the primary objective of
-                            which is the promotion of startups, generation of employment, and wealth creation. It was
-                            launched on the 16th of January, 2016 by Prime Minister Narendra Modi at Vigyan Bhawan, New
-                            Delhi.
-                            <a href="https://www.startupindia.gov.in/"><b><font color="black">CLICK HERE</font></b></a>
-                        </div>
-
-                    </div>
-                </center>
             </div>
         </div>
     </div>

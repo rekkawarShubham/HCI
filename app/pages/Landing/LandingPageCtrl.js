@@ -19,14 +19,12 @@
             var button = event.currentTarget;
             var sector = angular.element(button).text();
             if (sector == "Automobile") {
-
                 $scope.labels = ["Computer", "Mechanical", "Civil", "Electrical", "Electronics and Telecommunication", " IT", "Production", "Planning", "Metallurgy", "Instrumentation"];
                 $scope.data = [20, 20, 15, 25, 43, 15, 24, 32, 12, 32];
             }
             if (sector == "Aviation") {
                 $scope.labels = ["Computer", "Mechanical", "Civil", "Electrical", "Electronics and Telecommunication", " IT", "Production", "Planning", "Metallurgy", "Instrumentation"];
                 $scope.data = [35, 13, 15, 12, 32, 22, 12, 20, 40, 15];
-
             }
             if (sector == "Chemicals") {
                 $scope.labels = ["Computer", "Mechanical", "Civil", "Electrical", "Electronics and Telecommunication", " IT", "Production", "Planning", "Metallurgy", "Instrumentation"];

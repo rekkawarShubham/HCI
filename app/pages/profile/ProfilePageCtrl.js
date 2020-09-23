@@ -27,31 +27,38 @@
     }
     console.log("cin:"+cin);
 
+    var dept;
+        var name = "dept" + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                dept = c.substring(name.length, c.length);
+            }
+        }
+        console.log("dept:" + dept);
+
       $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
         $http({
             method: 'post',
-            url: 'http://127.0.0.1:8010/api/profile_details',
+            url: 'https://us-central1-financing-platform.cloudfunctions.net/pictFeedback/api/profile_details',
             data: {
-                cin : cin
+                cin : cin,
+                dept : dept
             }
         })
             .then(function successCallback(response) {
                 console.log(response.data.result);
                 if(response.data.result == 200){
                        console.log("Login SuccessFull");
-                      $scope.startup_name = response.data.startupname,
-                      $scope.stage = response.data.stage,
-                      $scope.vsector = response.data.vsector,
-                      $scope.date = response.data.date,
-                      $scope.hsector = response.data.hsector,
-                      $scope.auth_capital = response.data.auth_capital,
-                      $scope.paid_up = response.data.paid_up,
-                      $scope.b_type = response.data.btype,
-                      $scope.rno = response.data.rno,
-                      $scope.cplatform = response.data.cplatform  ,
-                      $scope.roc_code = response.data.roc,
-                      $scope.email = response.data.email,
-                      $scope.cin = response.data.cin
+                      $scope.admin_id = cin,
+                      $scope.dept = dept,
+                      $scope.email = response.data.email
                     }
                 else if(response.data.result == 404){
                     console.log("Login UnsuccessFull");  

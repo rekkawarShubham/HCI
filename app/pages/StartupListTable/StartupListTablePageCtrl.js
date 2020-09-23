@@ -1,17 +1,8 @@
 (function () {
-    'use strict';
 
+    'use strict';
     angular.module('BlurAdmin.pages.StartupListTable')
         .controller('StartupListTablePageCtrl', StartupListTablePageCtrl);
-
-
-    // function populateStartUp($scope,startupDocList){
-    //     // console.log(startupDocList);    
-    //     console.log($scope.smartTableData1);
-          
-    // }
-
-    /** @ngInject */
     function StartupListTablePageCtrl($scope, toastr, $filter, $http, $timeout) {
         
         var cin;

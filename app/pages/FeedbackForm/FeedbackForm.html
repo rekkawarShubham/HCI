@@ -1,0 +1,229 @@
+<div class="col-md-2"></div>
+
+<table class="table" st-table="smartTableData" st-safe-src="smartTableData1">
+    <tbody>
+        <tr ng-repeat="item in smartTableData" align="center">
+            <td>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="panel panel-info bootstrap-panel">
+                        <div class="panel-heading">
+                            <center><code>Give</code>Feedback</center>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group has-success">
+                                <div class="row">
+                                    <div class="col-mg-2"></div>
+                                    <div class="popular-app-img">
+                                        <img ng-src="{{ item.emp_img }}" id="emp_img" name="emp_img" ng-model="emp_img"
+                                            height="140" width="180" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-6">
+                                            <label for="emp_id">Professor ID</label>
+                                            <input type="text" class="form-control" name="emp_id" id="emp_id" ng-model="item.emp_id"
+                                                readonly style="color: black;font-weight: bold" required>
+                                        </div>
+        
+                                        <div class="col-md-6">
+                                            <label for="emp_name">Professor Name</label>
+                                            <input type="text" class="form-control" name="emp_name" id="emp_name" ng-model="item.emp_name"
+                                                style="color: black;font-weight: bold" readonly required>
+                                        </div>
+                            </div>
+                            <div class="row">
+                                <input type="text" class="form-control" name="question_1" id="question_1" ng-model="item.question_1"
+                                    readonly style="color: black;font-weight: bold" required>
+                                <div class="input-demo radio-demo row">
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions1" id="o1" value="Good"
+                                                ng-model="item.inlineRadioOptions1" required>
+                                            <span>Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions1" id="o2" value="Very Good"
+                                                ng-model="item.inlineRadioOptions1">
+                                            <span>Very Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions1" id="o3" value="Excellent"
+                                                ng-model="item.inlineRadioOptions1">
+                                            <span>Excellent</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions1" id="o4" value="Outstanding"
+                                                ng-model="item.inlineRadioOptions1">
+                                            <span>Outstanding</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="text" class="form-control" name="question_2" id="question_2" ng-model="item.question_2"
+                                    style="color: black;font-weight: bold" readonly required>
+
+                                <div class="input-demo radio-demo row">
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions2" id="o1" value="Good"
+                                                ng-model="item.inlineRadioOptions2" required>
+                                            <span>Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions2" id="o2" value="Very Good"
+                                                ng-model="item.inlineRadioOptions2">
+                                            <span>Very Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions2" id="o3" value="Excellent"
+                                                ng-model="item.inlineRadioOptions2">
+                                            <span>Excellent</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions2" id="o4" value="Outstanding"
+                                                ng-model="item.inlineRadioOptions2">
+                                            <span>Outstanding</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row">
+                                <input type="text" class="form-control" name="question_3" id="question_3" ng-model="item.question_3"
+                                    style="color: black;font-weight: bold" readonly required>
+
+                                <div class="input-demo radio-demo row">
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_3" id="o1" value="Good"
+                                                ng-model="item.inlineRadioOptions_3" required>
+                                            <span>Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_3" id="o2" value="Very Good"
+                                                ng-model="item.inlineRadioOptions_3">
+                                            <span>Very Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_3" id="o3" value="Excellent"
+                                                ng-model="item.inlineRadioOptions_3">
+                                            <span>Excellent</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_3" id="o4" value="Outstanding"
+                                                ng-model="item.inlineRadioOptions_3">
+                                            <span>Outstanding</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <input type="text" class="form-control" name="question_4" id="question_4" ng-model="item.question_4"
+                                    style="color: black;font-weight: bold" readonly required>
+
+                                <div class="input-demo radio-demo row">
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_4" id="o1" value="Good"
+                                                ng-model="item.inlineRadioOptions_4" required>
+                                            <span>Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_4" id="o2" value="Very Good"
+                                                ng-model="item.inlineRadioOptions_4">
+                                            <span>Very Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_4" id="o3" value="Excellent"
+                                                ng-model="item.inlineRadioOptions_4">
+                                            <span>Excellent</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_4" id="o4" value="Outstanding"
+                                                ng-model="item.inlineRadioOptions_4">
+                                            <span>Outstanding</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <input type="text" class="form-control" name="question_5" id="question_5" ng-model="item.question_5"
+                                    style="color: black;font-weight: bold" readonly required>
+
+                                <div class="input-demo radio-demo row">
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_5" id="o1" value="Good"
+                                                ng-model="item.inlineRadioOptions_5" required>
+                                            <span>Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_5" id="o2" value="Very Good"
+                                                ng-model="item.inlineRadioOptions_5">
+                                            <span>Very Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_5" id="o3" value="Excellent"
+                                                ng-model="item.inlineRadioOptions_5">
+                                            <span>Excellent</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="radio-inline custom-radio nowrap">
+                                            <input type="radio" name="inlineRadioOptions_5" id="o4" value="Outstanding"
+                                                ng-model="item.inlineRadioOptions_5">
+                                            <span>Outstanding</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-mg-3"></div>
+                                <button class="btn btn-success editable-table-button btn-xs" ng-click="approve_fund(item)">Submit</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

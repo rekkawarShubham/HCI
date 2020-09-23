@@ -10,7 +10,7 @@
 				url: '/StartupLogin',
 				controller: 'StartupLoginPageCtrl',
 				templateUrl: 'app/pages/StartupLogin/StartupLogin.html',
-				title: 'Startup', 
+				title: 'ADMIN', 
 				authenticate: true,
 				params: { // <-- focusing this one
 					authRoles: ['startup'] // <-- roles allowed for this module

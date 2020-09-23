@@ -29,139 +29,20 @@
     </div>
 
     <div class="row">
-      <!-- <div class="col-md-6">
-        <div class="form-group row clearfix">
-          <label for="inputFirstName" class="col-sm-3 control-label">First Name</label>
-
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="inputFirstName" placeholder="">
-          </div>
-        </div>
-        <div class="form-group row clearfix">
-          <label for="inputLastName" class="col-sm-3 control-label">Last Name</label>
-
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="inputLastName" placeholder="" >
-          </div>
-        </div>
-      </div> -->
+    
       <div class="col-md-6">
         <div class="form-group row clearfix">
-          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Startup Name :</label>
+          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">ADMIN ID:</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="startup_name" placeholder="My Startup" ng-model="startup_name"
+            <input type="text" class="form-control" id="admin_id" ng-model="admin_id"
               readonly style="color: black;font-weight: bold">
           </div>
         </div>
         <div class="form-group row clearfix">
-          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Stage :</label>
+          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Department :</label>
           <div class="col-sm-9">
-            <input type="text" class="form-control" id="stage" placeholder="Startup Stage" ng-model="stage" readonly
+            <input type="text" class="form-control" id="dept"  ng-model="dept" readonly
               style="color: black;font-weight: bold">
-          </div>
-        </div>
-
-        <div class="form-group row clearfix">
-          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Vertical Sector :</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="vsector" placeholder="Vertical Sector" ng-model="vsector" readonly
-              style="color: black;font-weight: bold">
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="col-md-6">
-
-        <div class="form-group row clearfix">
-          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">CIN No :</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="cin" placeholder="CIN no" ng-model="cin" readonly style="color: black;font-weight: bold">
-          </div>
-        </div>
-        <div class="form-group row clearfix">
-          <label class="col-sm-3 control-label" style="color: black;font-weight: bold">Date :</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="date" placeholder="Date of Incorporation" ng-model="date"
-              readonly style="color: black;font-weight: bold">
-          </div>
-        </div>
-        <div class="form-group row clearfix">
-            <label class="col-sm-3 control-label" style="color: black;font-weight: bold">H - Sector :</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" id="hsector" placeholder="Horizontal Sector" ng-model="hsector" readonly style="color: black;font-weight: bold">
-            </div>
-          </div>
-      </div>
-
-    </div>
-
-    <h3 class="with-line">Other Information</h3>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group row clearfix">
-          <label for="inputinterest1" class="col-sm-3 control-label" style="color: black;font-weight: bold">Real Capital:</label>
-
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="auth_capital" placeholder="" ng-model="auth_capital"
-              readonly style="color: black;font-weight: bold">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group row clearfix">
-
-          <label for="inputinterest2" class="col-sm-3 control-label" style="color: black;font-weight: bold">Paid UP :</label>
-
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="paid_up" placeholder="" ng-model="paid_up"
-              readonly style="color: black;font-weight: bold">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group row clearfix">
-          <label for="inputinterest1" class="col-sm-3 control-label" style="color: black;font-weight: bold">Business Type:</label>
-
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="b_type" placeholder="" ng-model="b_type"
-              readonly style="color: black;font-weight: bold">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group row clearfix">
-
-          <label for="inputinterest2" class="col-sm-3 control-label" style="color: black;font-weight: bold">Registration No:</label>
-
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="rno" placeholder="" ng-model="rno"
-              readonly style="color: black;font-weight: bold">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form-group row clearfix">
-          <label for="inputinterest5" class="col-sm-3 control-label" style="color: black;font-weight: bold">Cloud Platform:</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="cplatform" placeholder="" ng-model="cplatform"
-              readonly style="color: black;font-weight: bold">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group row clearfix">
-          <label for="inputinterest6" class="col-sm-3 control-label" style="color: black;font-weight: bold">ROC Code:</label>
-
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="roc_code" placeholder="" ng-model="roc_code"
-              readonly style="color: black;font-weight: bold">
           </div>
         </div>
       </div>

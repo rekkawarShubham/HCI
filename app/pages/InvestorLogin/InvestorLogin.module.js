@@ -11,7 +11,7 @@
                 controller: 'InvestorLoginPageCtrl',
                 controllerAs: 'vm',
                 templateUrl: 'app/pages/InvestorLogin/InvestorLogin.html',
-                title: 'InvestorLogin',
+                title: 'StudentLogin',
                 
                 authenticate: true,
                 params: { // <-- focusing this one

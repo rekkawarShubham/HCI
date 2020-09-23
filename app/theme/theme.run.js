@@ -12,7 +12,7 @@
   function themeRun($timeout, $rootScope, layoutPaths, preloader, $q, baSidebarService, themeLayoutSettings) {
     var whatToWait = [
       preloader.loadAmCharts(),
-      $timeout(1000)
+      $timeout(500)
     ];
 
     var theme = themeLayoutSettings;
